@@ -1,38 +1,44 @@
-<h1>List of Organizations</h1>
+<div id="org_list">
+<h1>Organizations</h1>
 
 <table>
   <tr>
+<% if false %>
     <th>Id</th>
+<% end %>
     <th>Name</th>
 <% if false %>
     <th>Summary</th>
     <th>Description</th>
-<% end %>
     <th>Chair</th>
     <th>Created at</th>
     <th>Updated at</th>
+<% end %>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @orgs.each do |org| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+<% if false %>
     <td><%= org.id %></td>
+<% end %>
     <td><%= org.name %></td>
 <% if false %>
     <td><%= org.summary %></td>
     <td><%= org.description %></td>
-<% end %>
     <td><%= org.chair %></td>
     <td><%= org.created_at %></td>
     <td><%= org.updated_at %></td>
+<% end %>
     <td><%= link_to 'Show', org %></td>
     <td><%= link_to 'Edit', edit_org_path(org) %></td>
     <td><%= link_to 'Destroy', org, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+</div>
 
 <br />
 
