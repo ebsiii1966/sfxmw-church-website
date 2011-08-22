@@ -3,6 +3,13 @@ require 'test_helper'
 class OrgsControllerTest < ActionController::TestCase
   setup do
     @org = orgs(:one)
+    @update = {
+      :id => 1,
+      :name => 'test org',
+      :summary => 'A parish organization',
+      :description => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      :chair => 'Joe Parishoner'
+    }
   end
 
   test "should get index" do
@@ -18,7 +25,7 @@ class OrgsControllerTest < ActionController::TestCase
 
   test "should create org" do
     assert_difference('Org.count') do
-      post :create, :org => @org.attributes
+      post :create, :org => @update
     end
 
     assert_redirected_to org_path(assigns(:org))
@@ -35,7 +42,7 @@ class OrgsControllerTest < ActionController::TestCase
   end
 
   test "should update org" do
-    put :update, :id => @org.to_param, :org => @org.attributes
+    put :update, :id => @org.to_param, :org => @update
     assert_redirected_to org_path(assigns(:org))
   end
 

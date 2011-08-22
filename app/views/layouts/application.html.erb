@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sfxmw</title>
-  <%= stylesheet_link_tag :all %>
+  <title>St. Francis Xavier Church</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag "sfxmw", :media => "all" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
-
-<%= yield %>
+<body id="sfxmw">
+  <div id="banner">
+	<div id="banner_left">
+    	<%= image_tag("logo.png") %>
+    </div>
+	<div id="banner_right">
+    	<%= image_tag("xlogo.png") %>
+    </div>
+	<%= @page_title || "St. Francis Xavier Church"%><br />
+	<div id="banner_addr">
+      155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 &nbsp;&nbsp;&nbsp; (502) 538-4933
+	</div>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="http://www.sfxmw.net">Home</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">General Info</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">Organizations</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">News</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">Calendar</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">On-line Forms</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">Feedback</a><br />
+	  <br />
+	  <a href="http://www.sfxmw.net/">Links</a><br />
+    </div>
+    <div id="main">
+  	  <%= yield %>
+    </div>
+    <div id="footer">
+	  <p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
+	</div>
+  </div>
+</div>
 
 </body>
 </html>

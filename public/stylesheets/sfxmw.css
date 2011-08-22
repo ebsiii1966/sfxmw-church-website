@@ -113,45 +113,79 @@
 
 /* Styles for main page */
 #banner {
-	background: #9c9;
+	background: #fff;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
-	color: #282;
+	color: #33c;
 	text-align: center;
 }
 
+#footer {
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 2px solid;
+	font-family: "Helvetica", serif;
+	color: #66c;
+	font-size: x-small;
+	text-align: center;
+}
+
+#banner_spacer {
+    float: left;	
+}
+
+#banner_addr {
+	color: #66c;
+	font-size: x-small;
+}
+
+/*
 #banner img{
 	float: left;
 }
+*/
+
+#banner_left{
+	float: left;
+}
+
+#banner_right{
+	float: right;
+}
 
 #columns {
-	background: #141;
+	background: #11a;
 }
 
 #main {
-	margin-left: 17em;
+	margin-left: 11em;
 	padding-top: 4em;
 	padding-left: 2em;
-	background: white;
+	/* background: white; */
+	background: #ddd;
 }
 
 #side {
+	clear: left;
 	float: left;
 	padding-top: 1em;
 	padding-left: 1em;
 	padding-bottom: 1em;
-	width: 16em;
-	background: #141;
+	width: 10em;
+	font-family: "Helvetica", serif;
+	/* font-family: "Times New Roman", Times, serif; */	
+	background: #11a;
 }
 
 #side a {
-	color: #bfb;
+	color: #ddd;
 	font-size: small;
 }	
 
 #side p {
-	color: #bfb;
+	color: #fff;
 	font-size: medium;
 }
