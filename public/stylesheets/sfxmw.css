@@ -41,7 +41,7 @@
 }
 
 #org_list .list_description dt {
-	color:        #244;
+	color:        #224;
 	font-weight:  bold;
 	font-size:    larger;
 }
@@ -57,11 +57,11 @@
 }
 
 #org_list .list_line_even {
-  background:   #e0f8f8;
+  background:   #f8f8e0;
 }
 
 #org_list .list_line_odd {
-  background:   #f8b0f8;
+  background:   #f8f8b0;
 }
 
 /* An entry in the store catalog */
@@ -189,3 +189,46 @@
 	color: #fff;
 	font-size: medium;
 }
+
+/* START:form */
+/* Styles for order form */
+
+.sfxmw_form fieldset {
+  background: #eef;
+}
+
+.sfxmw_form legend {
+  color: #ddf;
+  background: #114;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+
+.sfxmw_form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+
+.sfxmw_form select, .sfxmw_form textarea, .sfxmw_form input {
+  margin-left: 0.5em;
+}
+
+.sfxmw_form .submit {
+  margin-left: 4em;
+}
+
+.sfxmw_form div {
+  margin: 0.5em 0;
+}
+/* END:form */
+
+/* START:i18n */
+.locale {
+  float: right;
+  margin: -0.25em 0.1em;
+}
+/* END:i18n */
