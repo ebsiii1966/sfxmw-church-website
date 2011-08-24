@@ -28,16 +28,21 @@
 	  <br />
 	  <%= link_to 'Organizations', orgs_path %><br />
 	  <br />
-	  <a href="http://www.sfxmw.net/">News</a><br />
+	  <%= link_to 'News', home_path %><br />
 	  <br />
-	  <a href="http://www.sfxmw.net/">Calendar</a><br />
+	  <%= link_to 'Calendar', home_path %><br />
 	  <br />
-	  <a href="http://www.sfxmw.net/">On-line Forms</a><br />
+	  <%= link_to 'On-line Forms', home_path %><br />
 	  <br />
-	  <a href="http://www.sfxmw.net/">Feedback</a><br />
+	  <%= link_to 'Feedback', home_path %><br />
 	  <br />
-	  <a href="http://www.sfxmw.net/">Links</a><br />
-    </div>
+	  <%= link_to 'Links', home_path %><br />
+      <% if session[:user_id] %>
+		<br />
+		<br />
+		<%= button_to 'Logout', logout_path, :method => :delete %>
+	  <% end %>
+	</div>
     <div id="main">
   	  <%= yield %>
     </div>
