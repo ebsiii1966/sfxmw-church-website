@@ -1,6 +1,9 @@
-<div id="org_list">
+
 <h1>Organizations</h1>
 
+<br />
+
+<div id="org_list">
 <dl>
   <% @orgs.each do |org| %>
   <dt><%= link_to org.name, org %>
@@ -21,6 +24,6 @@
 
 <br />
 
-<% if session[:userid] %>
+<% if session[:user_id] %>
   <%= link_to 'New Org', new_org_path %>
 <% end %>

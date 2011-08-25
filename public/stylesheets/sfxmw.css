@@ -2,69 +2,43 @@
 
 /* Styles for orgs/index */
 
-#org_list table {
-        border-collapse: collapse;
-}
-
-#org_list table tr td {
-        padding: 5px;
-        vertical-align: top;
-}
-
-#org_list .list_image {
-  width:        60px;
-  height:       70px;
-}
-
-#org_list .list_description {
-  width:        60%;
-}
-
-#org_list .list_description dl {
-        margin: 0;
-}
-
-#org_list .list_description dt {
-	color:        #224;
-	font-weight:  bold;
-	font-size:    larger;
-}
-
-#org_list dt {
-	color:        #224;
-	font-weight:  bold;
-	font-size:    large;
-}
-
-#org_list dd {
-	color:        #224;
+dt {
+	color:        black;
 	font-weight:  normal;
 	font-size:    medium;
+	margin: 			1em 0 .5em 0;
+}
+
+dd {
+	color:        #888;
+	font-weight:  normal;
+	font-size:    small;
+}
+
+#org_list  dt > a:link {
+	text-decoration: none;
+	color:					 #000;
+	background-color: #ddd;
+}
+
+#org_list dt > a:visited {
+	text-decoration: none;
+	color:					 #000;
+	background-color: #ddd;
+}
+
+#org_list dt > a:hover {
+	text-decoration: underline;
+	color:					 #000;
+	background-color: #ddd;
 }
 
 #admin_links {
 	color:        #224;
 	font-weight:  lighter;
-	font-size:    x-small;
+	font-size:    xx-small;
 }
 
-#org_list .list_description dd {
-        margin: 0;
-}
-
-#org_list .list_actions {
-  font-size:    x-small;
-  text-align:   right;
-  padding-left: 1em;
-}
-
-#org_list .list_line_even {
-  background:   #f8f8e0;
-}
-
-#org_list .list_line_odd {
-  background:   #f8f8b0;
-}
 
 /* Styles for main page */
 #banner {
