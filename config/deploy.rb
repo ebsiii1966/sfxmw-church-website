@@ -24,7 +24,7 @@
 
 require 'bundler/capistrano'
 
-set :application, "sfxmw.net" # Your application location on your server goes here
+set :application, "sfxmw" # Your application location on your server goes here
 
 default_run_options[:pty] = true
 
