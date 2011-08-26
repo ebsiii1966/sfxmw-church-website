@@ -4,8 +4,6 @@
 
 #banner {
 	background: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
 	color: #33c;
@@ -14,13 +12,12 @@
 
 #footer {
 	background: #fff;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	border-top: 2px solid;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: small;
 	color: #66c;
 	text-align: center;
+	/* border: 1px solid red; */
 }
 
 #banner_addr {
@@ -43,26 +40,44 @@
 }
 
 #main {
- 	margin-left: 11em; /* needs to be one more em than the width of side below */
+ 	margin-left: 160px; 
 	padding-top: 0.5em;
 	padding-left: 2em;
 	padding-right: 2em;
   border-right: 2px solid #11a; 
 	/* background: white; */
-	background: #ddd;
+	background: #ddd;	
 }
 
 #side {
 	clear: 					both;
 	float: 					left;
 	padding-top: 		1em;
-	padding-left: 	1em;
 	padding-bottom: 1em;
-	width: 					10em;
+	width: 					160px;
 	font-family: 		verdana, arial, helvetica, sans-serif;
 	/* text-align:			center; */
 	/* font-family: 		"Times New Roman", Times, serif; */	
 	background: 		#11a;
+}
+
+#side_img {
+	float:					left;
+	width:					150px;
+	/* border: 1px solid yellow; */
+}	
+
+#side_img img {
+	max-width:			150px;
+	margin: 				0 auto;
+	padding-left: 	5px;
+	padding-right:	5px;
+	padding-bottom: 1em;
+}
+
+#side_nav {
+	padding-left: 	1em;
+	padding-right:	1em;
 }
 
 #side a {
