@@ -7,48 +7,53 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
+
 <body id="sfxmw">
+	
   <div id="banner">
-	<div id="banner_left">
+		<div id="banner_left">
     	<%= image_tag("logo.png") %>
-    </div>
-	<div id="banner_right">
+  	</div>
+		<div id="banner_right">
     	<%= image_tag("xlogo.png") %>
-    </div>
-	<%= @page_title || "St. Francis Xavier Church"%><br />
-	<div id="banner_addr">
-      155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 &nbsp;&nbsp;&nbsp; (502) 538-4933
-	</div>
+  	</div>
+		<%= @page_title || "St. Francis Xavier Church"%><br />
+		<div id="banner_addr">
+  		155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 
+			&nbsp;&nbsp;&nbsp; (502) 	538-4933
+		</div>
   </div>
+
   <div id="columns">
     <div id="side">
-	  <%= link_to 'Home', home_path %><br />
-	  <br />
-	  <%= link_to 'General Info', general_path %><br />
-	  <br />
-	  <%= link_to 'Organizations', orgs_path %><br />
-	  <br />
-	  <%= link_to 'News', home_path %><br />
-	  <br />
-	  <%= link_to 'Calendar', home_path %><br />
-	  <br />
-	  <%= link_to 'On-line Forms', home_path %><br />
-	  <br />
-	  <%= link_to 'Feedback', home_path %><br />
-	  <br />
-	  <%= link_to 'Links', home_path %><br />
+	  	<%= link_to 'Home', home_path %><br />
+	  	<br />
+	  	<%= link_to 'General Info', general_path %><br />
+	  	<br />
+	  	<%= link_to 'Organizations', orgs_path %><br />
+	  	<br />
+	  	<%= link_to 'News', home_path %><br />
+	  	<br />
+	  	<%= link_to 'Calendar', home_path %><br />
+	  	<br />
+	  	<%= link_to 'On-line Forms', home_path %><br />
+	  	<br />
+	  	<%= link_to 'Feedback', home_path %><br />
+	  	<br />
+	  	<%= link_to 'Links', home_path %><br />
       <% if session[:user_id] %>
-		<br />
-		<br />
-		<%= button_to 'Logout', logout_path, :method => :delete %>
-	  <% end %>
-	</div>
+				<br />
+				<br />
+				<%= button_to 'Logout', logout_path, :method => :delete %>
+	  		<% end %>
+		</div>
     <div id="main">
   	  <%= yield %>
     </div>
+
     <div id="footer">
-	  <p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
-	</div>
+	  	<p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
+		</div>
   </div>
 </div>
 

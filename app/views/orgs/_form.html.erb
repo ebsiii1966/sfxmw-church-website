@@ -11,38 +11,22 @@
     </div>
   <% end %>
 
-<% if false %>
-  <div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
-  </div>
-<% end %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :summary %><br />
-    <%= f.text_field :summary %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :rows => 9 %>
+    <%= f.text_area :summary, :cols => 60, :rows => 3 %>
   </div>
   <div class="field">
     <%= f.label :chair %><br />
     <%= f.text_field :chair %>
   </div>
-<% if false %>
   <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :cols => 60, :rows => 12 %>
   </div>
-  <div class="field">
-    <%= f.label :updated_at %><br />
-    <%= f.datetime_select :updated_at %>
-  </div>
-<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,46 +1,7 @@
 /* Global styles */
 
-/* Styles for orgs/index */
-
-dt {
-	color:        black;
-	font-weight:  normal;
-	font-size:    medium;
-	margin: 			1em 0 .5em 0;
-}
-
-dd {
-	color:        #888;
-	font-weight:  normal;
-	font-size:    small;
-}
-
-#org_list  dt > a:link {
-	text-decoration: none;
-	color:					 #000;
-	background-color: #ddd;
-}
-
-#org_list dt > a:visited {
-	text-decoration: none;
-	color:					 #000;
-	background-color: #ddd;
-}
-
-#org_list dt > a:hover {
-	text-decoration: underline;
-	color:					 #000;
-	background-color: #ddd;
-}
-
-#admin_links {
-	color:        #224;
-	font-weight:  lighter;
-	font-size:    xx-small;
-}
-
-
 /* Styles for main page */
+
 #banner {
 	background: #fff;
 	padding-top: 10px;
@@ -56,14 +17,10 @@ dd {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-top: 2px solid;
-	font-family: "Helvetica", serif;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: small;
 	color: #66c;
-	font-size: x-small;
 	text-align: center;
-}
-
-#banner_spacer {
-    float: left;	
 }
 
 #banner_addr {
@@ -71,44 +28,41 @@ dd {
 	font-size: small;
 }
 
-/*
-#banner img{
-	float: left;
-}
-*/
-
 #banner_left{
 	float: left;
+	/* width: 200px; */
 }
 
 #banner_right{
 	float: right;
+	/* width: 200px; */
 }
 
 #columns {
-	background: #11a;
+	background: #11a; 
 }
 
 #main {
-	margin-left: 11em;
-	padding-top: 4em;
+ 	margin-left: 11em; /* needs to be one more em than the width of side below */
+	padding-top: 0.5em;
 	padding-left: 2em;
 	padding-right: 2em;
-    border-right: 2px solid #11a; 
+  border-right: 2px solid #11a; 
 	/* background: white; */
 	background: #ddd;
 }
 
 #side {
-	clear: left;
-	float: left;
-	padding-top: 1em;
-	padding-left: 1em;
+	clear: 					both;
+	float: 					left;
+	padding-top: 		1em;
+	padding-left: 	1em;
 	padding-bottom: 1em;
-	width: 10em;
-	font-family: "Helvetica", serif;
-	/* font-family: "Times New Roman", Times, serif; */	
-	background: #11a;
+	width: 					10em;
+	font-family: 		verdana, arial, helvetica, sans-serif;
+	/* text-align:			center; */
+	/* font-family: 		"Times New Roman", Times, serif; */	
+	background: 		#11a;
 }
 
 #side a {
@@ -119,6 +73,70 @@ dd {
 #side p {
 	color: #fff;
 	font-size: medium;
+}
+
+/* Styles for orgs/index */
+
+#org_list dt > a {
+	color:			  #33c;
+	font-weight:  bold;
+	font-size:    large;
+	margin: 			1em 0 .5em 0;
+}
+
+#org_list dd {
+	color:        #555;
+	font-weight:  normal;
+	font-size:    medium;
+}
+
+#admin_links {
+	color:        #224;
+	font-weight:  lighter;
+	font-size:    small;
+}
+
+/* Styles for Nav2 - second level navigation */
+
+.nav2 {
+	color:				#224;
+	font-weight:	lighter;
+	font-size:		small;
+}
+
+/* Styles for General Info */
+
+h3 {
+	color:	#33c;
+}
+
+dt {
+	font-weight:	bold;
+}
+
+#shift_right {
+	margin-left:	2em;
+}
+
+table.grid {
+	border: 1px sold #000;
+	border-collapse: collapse;
+	/* width: 100%; */
+}
+
+table.grid th {
+	padding-right:	3em;
+	text-align:			left;
+	white-space:		nowrap;
+}
+
+table.grid td {
+	text-align:			left;
+	white-space:		nowrap;
+}
+
+table.stripe tr:nth-of-type(odd) {
+  background-color:#ccc;
 }
 
 /* START:form */

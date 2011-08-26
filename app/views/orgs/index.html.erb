@@ -1,8 +1,6 @@
 
 <h1>Organizations</h1>
 
-<br />
-
 <div id="org_list">
 <dl>
   <% @orgs.each do |org| %>
@@ -18,9 +16,16 @@
 	</dt>
   <dd><%= org.summary %></dd>
   <% end %>
-</dl>	
-	
+</dl>		
 </div>
+
+<br />
+
+<p style="color:red">
+TO-DO: Need to support organization groups (such as Worship, Administration, ...).  
+Each organization will belong to a group.  Will probably list by group; with the organizations
+within a group listed in alphabetical order.
+</p>
 
 <br />
 

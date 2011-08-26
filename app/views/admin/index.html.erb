@@ -3,6 +3,20 @@
   <br />
   <%= button_to 'Login', login_path, :method => :get %>
   <br />
+<% else %>
+	<br />
+	<p>
+		You are now logged in with administrative access.  Pages that can be modified will have
+		additional links such as "new", "edit", and "destroy".  These links will allow you to 
+		create new records, modify them, or delete them.  Once you are finished making changes,
+		please use the "Logout" button to return to the site as a normal user. 
+	</p>
+	<br />
+	<p style="color:red">
+		TO-DO: This page may have basic information that is only available to those that
+		have administration rights.  Information may include web statistics, last login/update
+		times, ...
+	</p>
 <% end %>
 <br />
 <br />
