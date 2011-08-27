@@ -9,46 +9,39 @@
 </head>
 
 <body id="sfxmw">
-  <div id="columns">
+	<div id="banner">
+		<%= @page_title || "St. Francis Xavier Church"%><br />
+		<div id="banner_addr">
+	  	155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 
+					&nbsp;&nbsp;&nbsp; (502) 	538-4933
+		</div>
+	</div>	
+	<div id="columns">	
     <div id="side">
 			<div id="side_img">
 				<%= image_tag("logo.png") %>
 			</div>
-			<div id="side_nav">
-				<%= link_to 'Home', home_path %><br /><br />
-				<%= link_to 'General Info', general_path %><br /><br />
-				<%= link_to 'Organizations', orgs_path %><br /><br />
-				<%= link_to 'News', home_path %><br /><br />
-				<%= link_to 'Calendar', home_path %><br /><br />
-				<%= link_to 'On-line Forms', home_path %><br /><br />
-				<%= link_to 'Feedback', home_path %><br /><br />
-				<%= link_to 'Links', home_path %><br />
+			<ul id="nav">
+				<li class="first"><%= link_to 'Home', home_path %></li>
+				<li><%= link_to 'General Info', general_path %></li>
+				<li><%= link_to 'Organizations', orgs_path %></li>
+				<li><%= link_to 'News', home_path %></li>
+				<li><%= link_to 'Calendar', home_path %></li>
+				<li id="forms"><%= link_to 'On-line Forms', home_path %></li>
+				<li id="feedback"><%= link_to 'Feedback', home_path %></li>
+				<li id="links"><%= link_to 'Links', home_path %></li>
 				<% if session[:user_id] %>
-				<br /><br />
-				<%= button_to 'Logout', logout_path, :method => :delete %>
+					<li><%= button_to 'Logout', logout_path, :method => :delete %></li>
 				<% end %>
-			</div>
+			</ul>
 		</div>
-		
-		<div id="banner">
-			<%= @page_title || "St. Francis Xavier Church"%><br />
-			<div id="banner_addr">
-		  	155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 
-						&nbsp;&nbsp;&nbsp; (502) 	538-4933
-			</div>
-		</div>		
-		
-    <div id="main">
+		<div id="main">
   	  <%= yield %>
-    </div>
-
-    <div id="footer">
-			<div id="side_img">
-				&nbsp;
-			</div>	
-	  	<p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
-		</div>
-  </div>
+    </div>	
+	</div>
+  <div id="footer">
+  	<p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
+	</div>
 </div>
 
 </body>

@@ -1,7 +1,10 @@
 /* Global styles */
 
-/* Styles for main page */
+.clear {
+	clear:	both;
+}
 
+/* Styles for main page */
 #banner {
 	background: #fff;
 	border-bottom: 2px solid;
@@ -11,6 +14,7 @@
 }
 
 #footer {
+	/* clear: both; */
 	background: #fff;
 	border-top: 2px solid;
 	font-family: verdana, arial, helvetica, sans-serif;
@@ -25,18 +29,10 @@
 	font-size: small;
 }
 
-#banner_left{
-	float: left;
-	/* width: 200px; */
-}
-
-#banner_right{
-	float: right;
-	/* width: 200px; */
-}
-
 #columns {
 	background: #11a; 
+	/* border-right: 2px solid #11a; */
+	/* border: 1px solid red; */
 }
 
 #main {
@@ -44,9 +40,9 @@
 	padding-top: 0.5em;
 	padding-left: 2em;
 	padding-right: 2em;
-  border-right: 2px solid #11a; 
+  border-right: 2px solid #11a;
 	/* background: white; */
-	background: #ddd;	
+	background: #eee;	
 }
 
 #side {
@@ -59,6 +55,7 @@
 	/* text-align:			center; */
 	/* font-family: 		"Times New Roman", Times, serif; */	
 	background: 		#11a;
+	/* border: 1px solid red; */
 }
 
 #side_img {
@@ -75,17 +72,23 @@
 	padding-bottom: 1em;
 }
 
-#side_nav {
+#nav {
+	list-style: none;
+	margin: 0px;
 	padding-left: 	1em;
 	padding-right:	1em;
 }
 
-#side a {
+#nav li {
+	padding-bottom: 1em;
+}
+
+#nav a {
 	color: #ddd;
 	font-size: medium;
 }	
 
-#side p {
+#nav p {
 	color: #fff;
 	font-size: medium;
 }
@@ -196,3 +199,68 @@ table.stripe tr:nth-of-type(odd) {
   margin: -0.25em 0.1em;
 }
 /* END:i18n */
+
+/* ********** < 1200px Wide ********** */
+@media (max-width: 770px) {
+	
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	#banner {
+		background: #fff;
+		border-bottom: 2px solid;
+		font: small-caps "Times New Roman", serif;
+		color: #33c;
+		text-align: center;
+	}	
+	
+	#columns {
+		margin: 0px;
+		padding: 0px;
+	}	
+	
+	#main {
+		clear:	both;
+		margin-left: 0px; 
+		border-right: none;
+	}
+	
+	#side {
+		float:					none;
+		/*
+		padding-top: 		.5em;
+		padding-bottom: .5em;
+		*/
+		margin: 0px;
+		padding: 0px;
+		width:					auto;
+		font-family: 		verdana, arial, helvetica, sans-serif;
+		/* text-align:			center; */
+		/* font-family: 		"Times New Roman", Times, serif; */	
+		background: 		#11a;
+		/* border: 1px solid red; */
+	}
+		
+	#side_img, #forms, #feedback, #links {
+		display: none;
+	}	
+
+	#nav {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#nav li {
+		float: left;
+		padding: .5em .5em .5em .5em;
+		border-left: 1px solid white;
+	}
+
+	#nav li.first {
+		border-left: 0px;
+	}
+
+}
