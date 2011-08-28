@@ -139,18 +139,19 @@ dt {
 table.grid {
 	border: 1px sold #000;
 	border-collapse: collapse;
+	white-space:	normal;
 	/* width: 100%; */
 }
 
 table.grid th {
 	padding-right:	3em;
 	text-align:			left;
-	white-space:		nowrap;
+	white-space:		normal; 
 }
 
 table.grid td {
 	text-align:			left;
-	white-space:		nowrap;
+	white-space:		normal; 
 }
 
 table.stripe tr:nth-of-type(odd) {
@@ -200,8 +201,10 @@ table.stripe tr:nth-of-type(odd) {
 }
 /* END:i18n */
 
-/* ********** < 1200px Wide ********** */
-@media (max-width: 770px) {
+/* ********** < 800px Wide or iPhone or iPad in Portrait mode ********** */
+@media (max-width: 800px),
+				(max-device-width: 480),
+				(min-device-width: 481) and (max-device-width: 1024) and (orientation: portrait) {
 	
 	body {
 		margin: 0px;
