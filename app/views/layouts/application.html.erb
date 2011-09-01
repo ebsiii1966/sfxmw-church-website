@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; user-scalable=1;" />
   <title>St. Francis Xavier Church</title>
   <%= stylesheet_link_tag "scaffold" %>
-  <%= stylesheet_link_tag "sfxmw", :media => "all" %>
+  <% if session[:style] == 'c' %>
+		<%= stylesheet_link_tag "sfxmw_c", :media => "all" %>
+	<% elsif session[:style] == 'b' %>
+		<%= stylesheet_link_tag "sfxmw_b", :media => "all" %>
+	<% else %>
+		<%= stylesheet_link_tag "sfxmw", :media => "all" %>
+	<% end %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>

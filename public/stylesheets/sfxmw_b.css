@@ -1,5 +1,4 @@
-/* Global styles */
-
+/* Global styles B */
 
 .clear {
 	clear:	both;
@@ -7,8 +6,8 @@
 
 /* Styles for main page */
 #banner {
+	margin-left: 170px;
 	background: #fff;
-	border-bottom: 2px solid;
 	font: small-caps 40px/40px "Times New Roman", serif;
 	color: #33c;
 	text-align: center;
@@ -16,13 +15,12 @@
 
 #footer {
 	/* clear: both; */
+	margin-left: 170px; 
 	background: #fff;
-	border-top: 2px solid;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: small;
 	color: #66c;
 	text-align: center;
-	/* border: 1px solid red; */
 }
 
 #banner_addr {
@@ -31,17 +29,18 @@
 }
 
 #columns {
-	background: #11a; 
-	/* border-right: 2px solid #11a; */
-	/* border: 1px solid red; */
+	/* background: #11a; */
 }
 
 #main {
- 	margin-left: 160px; 
+ 	margin-left: 170px; 
 	padding-top: 0.5em;
 	padding-left: 2em;
 	padding-right: 2em;
-  border-right: 2px solid #11a;
+  border: 2px solid #11a;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
 	/* background: white; */
 	background: #eee;	
 }
@@ -53,16 +52,15 @@
 	padding-bottom: 1em;
 	width: 					160px;
 	font-family: 		verdana, arial, helvetica, sans-serif;
-	/* text-align:			center; */
-	/* font-family: 		"Times New Roman", Times, serif; */	
+	border-radius: 	20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;	
 	background: 		#11a;
-	/* border: 1px solid red; */
 }
 
 #side_img {
 	float:					left;
 	width:					150px;
-	/* border: 1px solid yellow; */
 }	
 
 #side_img img {

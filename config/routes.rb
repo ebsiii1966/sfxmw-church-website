@@ -63,6 +63,10 @@ Sfxmw::Application.routes.draw do
 
   match 'home' => "home#index"
   match 'general' => "home#general"
+  
+  match 'style_a' => "admin#style_a"
+  match 'style_b' => "admin#style_b"
+  match 'style_c' => "admin#style_c"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

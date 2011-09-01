@@ -1,9 +1,9 @@
 <h1>Admin Section</h1>
-<% if !session[:user_id] %>
-  <br />
-  <%= button_to 'Login', login_path, :method => :get %>
-  <br />
-<% else %>
+	<% if !session[:user_id] %>
+  	<br />
+  	<%= button_to 'Login', login_path, :method => :get %>
+  	<br />
+	<% else %>
 	<br />
 	<p>
 		You are now logged in with administrative access.  Pages that can be modified will have
@@ -15,7 +15,31 @@
 	<p style="color:red">
 		TO-DO: This page may have basic information that is only available to those that
 		have administration rights.  Information may include web statistics, last login/update
-		times, ...
+		times, etc.
+	</p>
+	<br />
+	<p>
+		Below, are buttons to change the overall "style" of the website.  The current options are defined as:
+		<br />
+		A --> Original style - left navigation; simple box layout
+		<br />
+		B --> Similar to A, but corners are rounded and there is space between the navigation area and the 
+		main page area.
+		<br />
+		C --> Navigation is moved to the top and the primary content becomes a fixed width. 
+		<br /><br />
+		Current style:&nbsp;
+		<% if session[:style] == 'c' %>
+			C
+		<% elsif session[:style] == 'b' %> 
+			B 
+		<% else %> 
+			A 
+		<% end %>
+		<br />
+		<%= button_to 'Style A', :action => 'style_a', :method => :get %>
+		<%= button_to 'Style B', :action => 'style_b', :method => :get %>
+		<%= button_to 'Style C', :action => 'style_c', :method => :get %>
 	</p>
 <% end %>
 <br />
