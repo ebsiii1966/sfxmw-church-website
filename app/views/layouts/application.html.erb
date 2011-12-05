@@ -36,12 +36,12 @@
 			<ul id="nav">
 				<li class="first"><%= link_to 'Home', home_path %></li>
 				<li><%= link_to 'General Info', general_path %></li>
-				<li><%= link_to 'Organizations', orgs_path %></li>
-				<li><%= link_to 'News', home_path %></li>
+				<li><%= link_to 'Ministries', orgs_path %></li>
+				<li><%= link_to 'News', news_path %></li>
 				<li><%= link_to 'Calendar', home_path %></li>
-				<li id="forms"><%= link_to 'Forms', home_path %></li>
+				<li id="forms"><%= link_to 'Forms', forms_path %></li>
 				<li id="feedback"><%= link_to 'Feedback', home_path %></li>
-				<li id="links"><%= link_to 'Links', home_path %></li>
+				<li id="links"><%= link_to 'Links', links_path %></li>
 				<% if session[:user_id] %>
 					<li><%= button_to 'Logout', logout_path, :method => :delete %></li>
 				<% end %>

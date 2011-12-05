@@ -163,6 +163,42 @@ table.stripe tr:nth-of-type(odd) {
   background-color:#ccc;
 }
 
+
+/* Styles for News */
+
+h3 {
+	color:	#33c;
+}
+
+.news_image {
+	float: left;
+	margin-right: 20px;
+}
+
+.news_image.img {
+	float: left;
+}
+
+.news_intro {
+	margin-left: 20px;
+	padding-left: 20px;
+}
+
+.news_intro {
+	text-align: left;
+}
+
+/*
+.news_intro {
+	clear: left;
+}
+
+.news_intro.p {
+	float: left;
+}
+*/
+
+
 /* START:form */
 /* Styles for order form */
 

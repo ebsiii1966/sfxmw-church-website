@@ -63,6 +63,9 @@ Sfxmw::Application.routes.draw do
 
   match 'home' => "home#index"
   match 'general' => "home#general"
+  match 'forms' => "home#forms"
+  match 'links' => "home#links"
+  match 'news' => "home#news"
   
   match 'style_a' => "admin#style_a"
   match 'style_b' => "admin#style_b"
