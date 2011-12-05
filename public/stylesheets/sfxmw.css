@@ -30,6 +30,10 @@
 	font-size: small;
 }
 
+#banner_img {
+	display: none;
+}
+
 #columns {
 	background: #11a; 
 	/* border-right: 2px solid #11a; */

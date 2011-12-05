@@ -13,6 +13,10 @@
 	text-align: center;
 }
 
+#banner_img {
+	display: none;
+}
+
 #footer {
 	/* clear: both; */
 	margin-left: 170px; 
@@ -225,16 +229,23 @@ table.stripe tr:nth-of-type(odd) {
 	}
 		
 	#banner {
+	  margin-left: auto;
+	  margin-right: auto;
 		background: #fff;
-		border-bottom: 2px solid;
 		font: small-caps "Times New Roman", serif;
 		color: #33c;
 		text-align: center;
 	}	
+
+  #footer {
+	  margin-left: auto;
+	  margin-right: auto;		
+  }	
 	
 	#columns {
-		margin: 0px;
-		padding: 0px;
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 1px;
 	}	
 	
 	#main {
@@ -278,5 +289,10 @@ table.stripe tr:nth-of-type(odd) {
 	#nav li.first {
 		border-left: 0px;
 	}
-
+	
+	#nav a {
+		color: #33c;
+		font-size: medium;
+	}
+	
 }

@@ -17,7 +17,12 @@
 
 <body id="sfxmw">
 	<div id="banner">
-		<%= @page_title || "St. Francis Xavier Church"%><br />
+		<div id="banner_img">
+			<%= image_tag("logo.png") %>
+		</div>
+		<div id="banner_title">
+			<%= @page_title || "St. Francis Xavier Church"%><br />
+		</div>
 		<div id="banner_addr">
 	  	155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 
 					&nbsp;&nbsp;&nbsp; (502) 	538-4933
@@ -34,7 +39,7 @@
 				<li><%= link_to 'Organizations', orgs_path %></li>
 				<li><%= link_to 'News', home_path %></li>
 				<li><%= link_to 'Calendar', home_path %></li>
-				<li id="forms"><%= link_to 'On-line Forms', home_path %></li>
+				<li id="forms"><%= link_to 'Forms', home_path %></li>
 				<li id="feedback"><%= link_to 'Feedback', home_path %></li>
 				<li id="links"><%= link_to 'Links', home_path %></li>
 				<% if session[:user_id] %>
