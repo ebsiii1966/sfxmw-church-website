@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Summary:</b>
+  <%= @news_item.summary %>
+</p>
+
+<p>
+  <b>Story:</b>
+  <%= @news_item.story %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @news_item.image_url %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @news_item.created_by %>
+</p>
+
+<p>
+  <b>Updated by:</b>
+  <%= @news_item.updated_by %>
+</p>
+
+<p>
+  <b>Approved by:</b>
+  <%= @news_item.approved_by %>
+</p>
+
+<p>
+  <b>Post at:</b>
+  <%= @news_item.post_at %>
+</p>
+
+<p>
+  <b>Expire at:</b>
+  <%= @news_item.expire_at %>
+</p>
+
+<p>
+  <b>Organization:</b>
+  <%= @news_item.org_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_item_path(@news_item) %> |
+<%= link_to 'Back', news_items_path %>

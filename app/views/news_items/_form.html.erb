@@ -1,0 +1,41 @@
+<%= form_for(@news_item) do |f| %>
+  <% if @news_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_item.errors.count, "error") %> prohibited this news_item from being saved:</h2>
+
+      <ul>
+      <% @news_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_field :summary, :size => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label :story %><br />
+    <%= f.text_area :story, :cols => 80, :rows => 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url, :size => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label :post_at %><br />
+    <%= f.datetime_select :post_at %>
+  </div>
+  <div class="field">
+    <%= f.label :expire_at %><br />
+    <%= f.datetime_select :expire_at %>
+  </div>
+  <div class="field">
+    <%= f.label 'Ministry' %><br />
+		<%= f.collection_select(:org_id, Org.all, :id, :name, {:include_blank => 'None'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

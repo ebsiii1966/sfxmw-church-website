@@ -1,4 +1,6 @@
 Sfxmw::Application.routes.draw do
+  resources :news_items
+
   get 'admin' => 'admin#index'
   
   controller :sessions do

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110821163928) do
+ActiveRecord::Schema.define(:version => 20111229183143) do
+
+  create_table "news_items", :force => true do |t|
+    t.string   "summary"
+    t.text     "story"
+    t.string   "image_url"
+    t.integer  "created_by"
+    t.integer  "updated_by"
+    t.integer  "approved_by"
+    t.datetime "post_at"
+    t.datetime "expire_at"
+    t.integer  "org_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "orgs", :force => true do |t|
     t.string   "name"
