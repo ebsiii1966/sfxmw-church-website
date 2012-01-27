@@ -4,12 +4,14 @@
 <% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
 	
 	<h3><%= news_item.summary %></h3>
-	<%= image_tag(news_item.image_url) %>
+	<%= image_tag(news_item.picture.url(:normal))%>
 	<p><%= news_item.story %></p>
 	<br />
-  <%= link_to 'Show', news_item %>&nbsp;&nbsp;
-  <%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
-  <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
+	<% if session[:user_id] %>
+  	<%= link_to 'Show', news_item %>&nbsp;&nbsp;
+  	<%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
+  	<%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
+	<% end %>
 	<hr />
 	
 <% end %>
@@ -22,6 +24,7 @@
 <% if news_item.expire_at < Time.now %>
 	
 	<h3><%= news_item.summary %></h3>
+	<%= image_tag(news_item.picture.url(:thumb))%>
 	<p><%= news_item.story %></p>
 	<br />
 	<p>Expired at <%= news_item.expire_at %></p>
@@ -38,6 +41,7 @@
 <% if news_item.post_at > Time.now %>
 	
 	<h3><%= news_item.summary %></h3>
+	<%= image_tag(news_item.picture.url(:normal))%>
 	<p><%= news_item.story %></p>
 	<br />
 	<p>Post at <%= news_item.post_at %></p>

@@ -1,4 +1,5 @@
 class NewsItem < ActiveRecord::Base
+  has_attached_file :picture, :styles => { :normal => "900X600", :thumb => "100X100" }
   validates :summary, :story, :presence => true
   default_scope :order => :created_at
   

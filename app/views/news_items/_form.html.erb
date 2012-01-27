@@ -1,4 +1,4 @@
-<%= form_for(@news_item) do |f| %>
+<%= form_for @news_item, :html => { :multipart => true } do |f| %>
   <% if @news_item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news_item.errors.count, "error") %> prohibited this news_item from being saved:</h2>
@@ -20,8 +20,12 @@
     <%= f.text_area :story, :cols => 80, :rows => 20 %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url, :size => 80 %>
+    <%= f.label :picture %><br />
+	  <% if @readonly == true %>
+			<%= f.object.picture.url %>
+		<% else %>
+      <%= f.file_field :picture %>
+		<% end %>
   </div>
   <div class="field">
     <%= f.label :post_at %><br />

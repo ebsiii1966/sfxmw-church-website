@@ -25,6 +25,7 @@ class NewsItemsController < ApplicationController
   # GET /news_items/new.xml
   def new
     @news_item = NewsItem.new
+    @readonly = false
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class NewsItemsController < ApplicationController
   # GET /news_items/1/edit
   def edit
     @news_item = NewsItem.find(params[:id])
+    @readonly = true
   end
 
   # POST /news_items

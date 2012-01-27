@@ -14,6 +14,8 @@ Sfxmw::Application.routes.draw do
   resources :users
 
   resources :orgs
+  
+  resources :news_items
 
 
   # The priority is based upon order of creation:
@@ -67,7 +69,7 @@ Sfxmw::Application.routes.draw do
   match 'general' => "home#general"
   match 'forms' => "home#forms"
   match 'links' => "home#links"
-  match 'news' => "home#news"
+  # match 'news' => "home#news"
   
   match 'style_a' => "admin#style_a"
   match 'style_b' => "admin#style_b"

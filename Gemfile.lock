@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.10)
     arel (2.0.10)
     builder (2.1.2)
+    cocaine (0.2.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.5.0)
@@ -40,6 +41,11 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.7)
+    paperclip (2.5.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.2)
     rack (1.2.1)
     rack-mount (0.6.14)
@@ -74,6 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   mysql2 (= 0.2.7)
+  paperclip
   rack (= 1.2.1)
   rails (= 3.0.10)
   sqlite3
