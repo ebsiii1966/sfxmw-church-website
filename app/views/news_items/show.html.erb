@@ -1,50 +1,17 @@
-<p id="notice"><%= notice %></p>
+
+<div class="NewsItems">
+	<h1><%= @news_item.summary %></h1>
+	<%= image_tag(@news_item.picture.url(:normal)) %>
+	<p><%= @news_item.story %></p>
+	<br />
+	<div class="clear">&nbsp;</div>
+</div>
 
 <p>
-  <b>Summary:</b>
-  <%= @news_item.summary %>
+Posted at: <%= @news_item.post_at %>
 </p>
 
-<p>
-  <b>Story:</b>
-  <%= @news_item.story %>
-</p>
-
-<p>
-  <b>Picture url:</b>
-  <%= @news_item.picture.url %>
-</p>
-
-<p>
-  <b>Created by:</b>
-  <%= @news_item.created_by %>
-</p>
-
-<p>
-  <b>Updated by:</b>
-  <%= @news_item.updated_by %>
-</p>
-
-<p>
-  <b>Approved by:</b>
-  <%= @news_item.approved_by %>
-</p>
-
-<p>
-  <b>Post at:</b>
-  <%= @news_item.post_at %>
-</p>
-
-<p>
-  <b>Expire at:</b>
-  <%= @news_item.expire_at %>
-</p>
-
-<p>
-  <b>Organization:</b>
-  <%= @news_item.org_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_news_item_path(@news_item) %> |
+<% if session[:user_id] %>
+	<%= link_to 'Edit', edit_news_item_path(@news_item) %> |
+<% end %>
 <%= link_to 'Back', news_items_path %>

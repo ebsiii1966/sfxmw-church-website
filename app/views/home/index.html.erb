@@ -1,23 +1,71 @@
-<h1>Home Page</h1>
-<p style="color:red">
-This page is currently under development.
+<h1>Welcome</h1>
+
+<p>
+St. Francis Xavier is a Roman Catholic Church, in Mt. Washington, Kentucky established in 1846 to further God's kingdom on earth.
+We are a welcoming community of faith serving the spiritual, emotional, intellectual and physical needs of our parishioners.
+We are dedicated to the celebration of the sacraments and the teachings of the church.
+Our goal is to meet these needs through various parish organizations and through community ministries.
 </p>
 
+<hr />
+
+<div id="wrap">
+<div id="left">
+	
+<h2>Mass Schedule</h2>
+<table class="grid stripe">
+	<tr><th>Monday</th><td>6:00pm</td></tr>
+	<tr><th>Wednesday</th><td>6:00pm</td></tr>
+	<tr><th>Thursday</th><td>8:30pm</td></tr>
+	<tr><th>Saturday</th><td>5:00pm</td></tr>
+	<tr><th>Sunday</th><td>7:00am &amp;<br/>9:00am</td></tr>
+	<tr><th>Ash Wednesday<br/>Feb. 22</td><td>8:30am &amp;<br/>7:00pm</td></tr>
+</table>
+
 <br />
+<hr />
+
+<h2>Bulletins</h2>
+<%= bulletin_link(Date.today) %>
 <br />
+<%= bulletin_link(Date.today - 7) %>
 <br />
+<%= bulletin_link(Date.today - 14) %>
 <br />
+
 <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<hr />
+
+<h2>Parish Office</h2>
+
+<p>Hours:<br />
+	 Monday-Thursday, 8:30am to 4:00pm<br />
+	 and Friday, 8:30am to Noon
+</p>
+<p>Phone:<br />
+	 (502) 538.4933 or (502) 955.5366
+</p>
+<p>Address:<br />
+	 155 Stringer Lane<br />
+	 Mt. Washington, KY  40047<br>
+	 <%= link_to 'Directions', directions_path %>
+</p>
+
+</div>
+
+<div id="right">
+	<div class="NewsItems">
+		<h2><%= @news_items.summary %></h2>
+		<%= image_tag(@news_items.picture.url(:thumb))%>
+		<p>
+		<%= truncate(@news_items.story, :length => 300, :omission => '...') %>
+				<%= link_to "full story", @news_items %>
+		</p>
+		<br />
+		<div class="clear">&nbsp;</div>
+	</div>
+</div>
+
+</div>
+
+<div class="clear" />
