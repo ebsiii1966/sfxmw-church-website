@@ -8,7 +8,9 @@ body {
 }
 
 h1 {	
+
 	/* font: bold 30px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
+	
 	font: small-caps 40px/40px "Times New Roman", serif;
 	color: DarkBlue;
 }

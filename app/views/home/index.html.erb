@@ -12,15 +12,19 @@ Our goal is to meet these needs through various parish organizations and through
 <div id="wrap">
 <div id="left">
 	
-<h2>Mass Schedule</h2>
-<table class="grid stripe">
-	<tr><th>Monday</th><td>6:00pm</td></tr>
-	<tr><th>Wednesday</th><td>6:00pm</td></tr>
-	<tr><th>Thursday</th><td>8:30pm</td></tr>
-	<tr><th>Saturday</th><td>5:00pm</td></tr>
-	<tr><th>Sunday</th><td>7:00am &amp;<br/>9:00am</td></tr>
-	<tr><th>Ash Wednesday<br/>Feb. 22</td><td>8:30am &amp;<br/>7:00pm</td></tr>
-</table>
+	<h2>Ash Wednesday</h2>
+	<table class="grid stripe">
+		<tr><th>Feb. 22</td><td>8:30am &amp;<br/>7:00pm</td></tr>
+	</table>
+
+	<h2>Mass Schedule</h2>
+	<table class="grid stripe">
+		<tr><th>Monday</th><td>6:00pm</td></tr>
+		<tr><th>Wednesday</th><td>6:00pm</td></tr>
+		<tr><th>Thursday</th><td>8:30pm</td></tr>
+		<tr><th>Saturday</th><td>5:00pm</td></tr>
+		<tr><th>Sunday</th><td>7:00am &amp;<br/>9:00am</td></tr>
+	</table>
 
 <br />
 <hr />
@@ -56,7 +60,7 @@ Our goal is to meet these needs through various parish organizations and through
 <div id="right">
 	<div class="NewsItems">
 		<h2><%= @news_items.summary %></h2>
-		<%= image_tag(@news_items.picture.url(:thumb))%>
+		<%= image_tag(@news_items.picture.url(:thumb)) if @news_items.picture? %>
 		<p>
 		<%= truncate(@news_items.story, :length => 300, :omission => '...') %>
 				<%= link_to "full story", @news_items %>

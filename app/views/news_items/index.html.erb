@@ -5,7 +5,7 @@
 <% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
 	
 	<h2><%= link_to news_item.summary, news_item %></h2>
-	<%= image_tag(news_item.picture.url(:small)) %>
+	<%= image_tag(news_item.picture.url(:small)) if news_item.picture? %>
 	<p><%= truncate(news_item.story, :length => 300, :omission => '...') %>
 			<%= link_to "full story", news_item %>
 	</p>
@@ -31,7 +31,7 @@
 <% if news_item.post_at > Time.now %>
 	
 	<h2><%= news_item.summary %></h2>
-	<%= image_tag(news_item.picture.url(:normal))%>
+	<%= image_tag(news_item.picture.url(:normal)) if news_item.picture? %>
 	<p><%= news_item.story %></p>
 	<br />
 	<p>Post at <%= news_item.post_at %></p>
@@ -48,7 +48,7 @@
 <% if news_item.expire_at < Time.now %>
 	
 	<h2><%= news_item.summary %></h2>
-	<%= image_tag(news_item.picture.url(:thumb))%>
+	<%= image_tag(news_item.picture.url(:thumb)) if news_item.picture? %>
 	<p><%= news_item.story %></p>
 	<br />
 	<p>Expired at <%= news_item.expire_at %></p>

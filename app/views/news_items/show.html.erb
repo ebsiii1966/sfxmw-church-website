@@ -1,7 +1,7 @@
 
 <div class="NewsItems">
 	<h1><%= @news_item.summary %></h1>
-	<%= image_tag(@news_item.picture.url(:normal)) %>
+	<%= image_tag(@news_item.picture.url(:normal)) if @news_item.picture? %>
 	<p><%= @news_item.story %></p>
 	<br />
 	<div class="clear">&nbsp;</div>
