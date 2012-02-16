@@ -27,6 +27,10 @@
     <%= f.label :description %><br />
     <%= f.text_area :description, :cols => 60, :rows => 12 %>
   </div>
+  <div class="field">
+    <%= f.label 'Group' %><br />
+		<%= f.collection_select(:group_id, Org.select{|o| o.group_id.nil?}, :id, :name, {:include_blank => 'None'}) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

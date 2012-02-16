@@ -12,31 +12,45 @@ Our goal is to meet these needs through various parish organizations and through
 <div id="wrap">
 <div id="left">
 	
+	<h2>Mass Schedule</h2>
+	<table class="grid stripe">
+		<tr><th>Weekdays</th><td>&nbsp;</td></tr>
+		<tr><td>Monday</td><td>6:00pm</td></tr>
+		<tr><td>Wednesday</td><td>6:00pm</td></tr>
+		<tr><td>Thursday</td><td>8:30am</td></tr>
+		<tr><th>Weekends</th><td>&nbsp;</td></tr>
+		<tr><td>Saturday</td><td>5:00pm</td></tr>
+		<tr><td>Sunday</td><td>7:00am &amp;<br/>9:00am</td></tr>
+	</table>
 	<h2>Ash Wednesday</h2>
 	<table class="grid stripe">
 		<tr><th>Feb. 22</td><td>8:30am &amp;<br/>7:00pm</td></tr>
 	</table>
 
-	<h2>Mass Schedule</h2>
-	<table class="grid stripe">
-		<tr><th>Monday</th><td>6:00pm</td></tr>
-		<tr><th>Wednesday</th><td>6:00pm</td></tr>
-		<tr><th>Thursday</th><td>8:30pm</td></tr>
-		<tr><th>Saturday</th><td>5:00pm</td></tr>
-		<tr><th>Sunday</th><td>7:00am &amp;<br/>9:00am</td></tr>
-	</table>
-
 <br />
 <hr />
 
-<h2>Bulletins</h2>
-<%= bulletin_link(Date.today) %>
-<br />
-<%= bulletin_link(Date.today - 7) %>
-<br />
-<%= bulletin_link(Date.today - 14) %>
-<br />
+<div class="container">
+<div id="bulletins">
+	<h2>Bulletins</h2>
+	<%= bulletin_link(Date.today) %>
+	<br />
+	<%= bulletin_link(Date.today - 7) %>
+	<br />
+	<%= bulletin_link(Date.today - 14) %>
+	<br />
+</div>
 
+<div id="readings">
+	<h2>Readings</h2>
+	<%= bible_readings_link(Date.today, "Today") %>
+	<br />
+	<%= bible_readings_link(Date.today+1, "Tomorrow") %>
+	<br />
+  <%= sunday_bible_readings_link(Date.today, "Sunday") %>
+	<br />
+</div>	
+</div>
 <br />
 <hr />
 
@@ -58,15 +72,12 @@ Our goal is to meet these needs through various parish organizations and through
 </div>
 
 <div id="right">
-	<div class="NewsItems">
-		<h2><%= @news_items.summary %></h2>
-		<%= image_tag(@news_items.picture.url(:thumb)) if @news_items.picture? %>
-		<p>
-		<%= truncate(@news_items.story, :length => 300, :omission => '...') %>
-				<%= link_to "full story", @news_items %>
-		</p>
-		<br />
-		<div class="clear">&nbsp;</div>
+	<div class="NewsItems">	
+		<% @news_items.each do |news_item| %>
+			<% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
+				<%= display_news(news_item, :h2, true, :thumb) %>
+			<% end %>
+		<% end %>
 	</div>
 </div>
 

@@ -1,14 +1,10 @@
 
 <div class="NewsItems">
-	<h1><%= @news_item.summary %></h1>
-	<%= image_tag(@news_item.picture.url(:normal)) if @news_item.picture? %>
-	<p><%= @news_item.story %></p>
-	<br />
-	<div class="clear">&nbsp;</div>
+	<%= display_news(@news_item, :h1, false, :normal) %>
 </div>
 
 <p>
-Posted at: <%= @news_item.post_at %>
+Posted: <%= @news_item.post_at.strftime("%B %d, %Y") %>
 </p>
 
 <% if session[:user_id] %>

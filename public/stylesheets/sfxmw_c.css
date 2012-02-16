@@ -3,14 +3,13 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	background-image: url('../images/yello059.gif');
 	/* background: #ccc; */
+	/* background-image: url('../images/yello059.gif'); */
+	background-image: url('../images/dio_bg.png');
 }
 
 h1 {	
-
 	/* font: bold 30px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
-	
 	font: small-caps 40px/40px "Times New Roman", serif;
 	color: DarkBlue;
 }
@@ -22,12 +21,14 @@ h2 {
 
 h3 {
 	font: large "Times New Roman", serif;
-	/* color:	#33c; */
 	color: DarkBlue;	
 }
 
 .clear {
 	clear:	both;
+}	
+.clearleft {
+	clear:	left;
 }
 
 /* Styles for main page */
@@ -43,7 +44,7 @@ h3 {
 	/* border-bottom: 2px solid; */
 	/* font: bold 30px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
 	font: small-caps 40px/40px "Times New Roman", serif; 
-	color: #fff;
+	color: white;
 	text-align: center;
 	/* border: 1px solid red; */
 }
@@ -59,21 +60,19 @@ h3 {
 	border-top: 2px solid;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: small;
-	color: #fff;
+	color: white;
 	text-align: center;
 	/* border: 1px solid red; */
 }
 
 #banner_addr {
-	color: #fff;
+	color: white;
 	font-size: small;
-	/* font-size: 10px; */
 }
 
 #banner_img {
 	float:			left;
 	margin-left: 20px;
-	/* border: 1px solid yellow; */
 }	
 
 #banner_img img {
@@ -87,7 +86,6 @@ h3 {
  	margin-left: auto;
   margin-right: auto;
   background-image: url('../images/dblue179.jpg');
-	/* background: green; */
 	/* border: 1px solid red; */
 }
 
@@ -111,13 +109,10 @@ h3 {
   margin-right: auto;
 	margin: 0px;
 	padding: 0px;
-	font-family: 		verdana, arial, helvetica, sans-serif;
+	/* font-family: Verdana, Arial, Helvetica, sans-serif; */
+	font: medium verdana,sans-serif; 
 	/* border: 1px solid red; */
 }
-	
-#side_img {
-	display: none;
-}	
 
 #nav {
 	list-style: none;
@@ -127,36 +122,47 @@ h3 {
 
 #nav li {
 	float: left;
-	padding: .5em .5em .5em .5em;
+	padding: .5em 1.5em .5em .5em;
 	/* border-left: 1px solid white; */
 }
 
 #nav li.first {
-	border-left: 0px;
+	margin-left: 10px;
 }
 
 #nav a {
-	color: #fff;
+	color: white;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: medium;
 }
 
-/* Styles for orgs/index */
+/* Styles for orgs */
+
+#org_group dt > a {
+	font: x-large "Times New Roman", serif;
+	color: DarkBlue;
+}
+
+#org_group dd {
+	font-weight: normal;
+	font-size: medium;
+}
 
 #org_list dt > a {
-	/* color:			  #33c; */
-	font: large "Times New Roman", serif;
-	color:			  DarkBlue;
-	/* font-weight:  bold; */
-	/* font-size:    large; */
-	margin: 			1em 0 .5em 0;
+	font: large "Verdana", sans-serif;
+	color: DarkBlue;
 }
 
 #org_list dd {
-	/* color:        #555; */
-	font-weight:  normal;
-	font-size:    medium;
+	font-weight: normal;
+	font-size: medium;
 }
+
+#org_list dl {
+	margin-left: 1em;
+}
+
+/* Styles for index */
 
 #admin_links {
 	/* color:        #224; */
@@ -255,9 +261,37 @@ table.stripe tr:nth-of-type(odd) {
 	/* border-top: 2px solid #66c; */
 }
 
+.container {
+	height: 1%;
+	overflow: hidden;
+}
+
+#bulletins {
+	float: left;
+	width: 190px;
+}
+
+#readings {
+	float: left;
+	width: 160px;
+}
+
 
 /* START:form */
-/* Styles for order form */
+/* Styles for forms */
+
+.field, .actions submit {
+  font-size: medium;	
+}
+
+.field select, .field textarea, .field input, .field label {
+  margin-left: 0.5em;
+	font-size: medium;
+}
+.actions select, .actions textarea, .actions input, .actions label {
+  margin-left: 0.5em;
+	font-size: medium;
+}
 
 .sfxmw_form fieldset {
   background: #eef;
@@ -281,6 +315,7 @@ table.stripe tr:nth-of-type(odd) {
 
 .sfxmw_form select, .sfxmw_form textarea, .sfxmw_form input {
   margin-left: 0.5em;
+	font-size: medium;
 }
 
 .sfxmw_form .submit {

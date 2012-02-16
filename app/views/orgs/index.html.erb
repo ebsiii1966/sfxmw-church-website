@@ -1,32 +1,45 @@
 
 <h1>Ministries</h1>
+	
+<% @orgs.select{|o| o.group_id.nil?}.each do |group| %>
 
+<div id="org_group">
+	<dl>
+  <dt><%= link_to group.name, group %>
+	<% if session[:user_id] %>
+    &nbsp;&nbsp;&nbsp;
+    <span id="admin_links">
+    (<%= link_to 'Show', group %>,
+    <%= link_to 'Edit', edit_org_path(group) %>,
+    <%= link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %>)
+    </span>
+  <% end %>
+	</dt>
+  <dd><%= group.summary %></dd>
+  </dl>	
+</div>
+	
 <div id="org_list">
 <dl>
-  <% @orgs.each do |org| %>
+  <% @orgs.select{|o2| o2.group_id == group.id}.each do |org| %>
   <dt><%= link_to org.name, org %>
 	<% if session[:user_id] %>
-      &nbsp;&nbsp;&nbsp;
-      <span id="admin_links">
-      (<%= link_to 'Show', org %>,
-      <%= link_to 'Edit', edit_org_path(org) %>,
-      <%= link_to 'Destroy', org, :confirm => 'Are you sure?', :method => :delete %>)
-      </span>
-    <% end %>
+    &nbsp;&nbsp;&nbsp;
+    <span id="admin_links">
+    (<%= link_to 'Show', org %>,
+    <%= link_to 'Edit', edit_org_path(org) %>,
+    <%= link_to 'Destroy', org, :confirm => 'Are you sure?', :method => :delete %>)
+    </span>
+  <% end %>
 	</dt>
   <dd><%= org.summary %></dd>
   <% end %>
 </dl>		
 </div>
 
+<% end %>
+
 <br />
-
-<p style="color:red">
-TO-DO: Need to support organization groups (such as Worship, Administration, ...).  
-Each organization will belong to a group.  Will probably list by group; with the organizations
-within a group listed in alphabetical order.
-</p>
-
 <br />
 
 <% if session[:user_id] %>

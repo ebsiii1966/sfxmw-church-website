@@ -29,12 +29,12 @@
 		C --> Navigation is moved to the top and the primary content becomes a fixed width. 
 		<br /><br />
 		Current style:&nbsp;
-		<% if session[:style] == 'c' %>
-			C
+		<% if session[:style] == 'a' %>
+			A
 		<% elsif session[:style] == 'b' %> 
 			B 
 		<% else %> 
-			A 
+			C 
 		<% end %>
 		<br />
 		<%= button_to 'Style A', :action => 'style_a', :method => :get %>

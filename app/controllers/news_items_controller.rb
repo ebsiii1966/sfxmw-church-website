@@ -2,7 +2,7 @@ class NewsItemsController < ApplicationController
   # GET /news_items
   # GET /news_items.xml
   def index
-    @news_items = NewsItem.all
+    @news_items = NewsItem.order("post_at").all
 
     respond_to do |format|
       format.html # index.html.erb

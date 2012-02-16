@@ -4,15 +4,12 @@
 <% @news_items.each do |news_item| %>
 <% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
 	
-	<h2><%= link_to news_item.summary, news_item %></h2>
-	<%= image_tag(news_item.picture.url(:small)) if news_item.picture? %>
-	<p><%= truncate(news_item.story, :length => 300, :omission => '...') %>
-			<%= link_to "full story", news_item %>
-	</p>
-	<br />
-	<div class="clear">&nbsp;</div>
-	
+	<%= display_news(news_item, :h2, true, :small) %>
+	Posted: <%= news_item.post_at.strftime("%B %d, %Y") %>
+  <br />
+
 	<% if session[:user_id] %>
+	  <br />
   	<%= link_to 'Show', news_item %>&nbsp;&nbsp;
   	<%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
   	<%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
@@ -29,12 +26,11 @@
 <h2>Future News Items</h2>
 <% @news_items.each do |news_item| %>
 <% if news_item.post_at > Time.now %>
-	
-	<h2><%= news_item.summary %></h2>
-	<%= image_tag(news_item.picture.url(:normal)) if news_item.picture? %>
-	<p><%= news_item.story %></p>
+
+	<%= display_news(news_item, :h2, true, :small) %>	
+	Will post on: <%= news_item.post_at.strftime("%B %d, %Y") %>
+	<br />	
 	<br />
-	<p>Post at <%= news_item.post_at %></p>
   <%= link_to 'Show', news_item %>&nbsp;&nbsp;
   <%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
   <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
@@ -46,12 +42,11 @@
 <h2>Expired News Items</h2>
 <% @news_items.each do |news_item| %>
 <% if news_item.expire_at < Time.now %>
-	
-	<h2><%= news_item.summary %></h2>
-	<%= image_tag(news_item.picture.url(:thumb)) if news_item.picture? %>
-	<p><%= news_item.story %></p>
+
+	<%= display_news(news_item, :h2, true, :small) %>	
+	Expired on: <%= news_item.expire_at.strftime("%B %d, %Y") %>
 	<br />
-	<p>Expired at <%= news_item.expire_at %></p>
+	<br />		
   <%= link_to 'Show', news_item %>&nbsp;&nbsp;
   <%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
   <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>

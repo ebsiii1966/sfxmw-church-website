@@ -1,50 +1,48 @@
 <h1>Links</h1>
 
 <div class="links">
+  <h2>Catholic Sites</h2>
+  <ul>
+	  <li><a href="http://www.vatican.va/phome_en.htm" target="rsite">The Vatican</a></li>
+	  <li><a href="http://www.nccbuscc.org/" target="rsite">United States Conference of Catholic Bishops</a></li>
+	  <li><a href="http://www.archlou.org/" target="rsite">Archdiocese of Louisville</a></li>
+	  <li><a href="http://www.catholicweb.com/" target="rsite">CatholicWeb.com</a></li>
+	  <li><a href="http://www.americancatholic.org/" target="rsite">AmericanCatholic.org</a></li>
+	  <li><a href="http://www.ccky.org/" target="rsite">Catholic Conference of Kentucky</a></li>
+	  <li><a href="http://www.catholiccharitieslouisville.org/" target="rsite">Catholic Charities of Louisville</a></li>
+	  <li><a href="http://www.catholicextension.org/" target="rsite">Catholic Extension</a></li>	   
+  </ul>
 
+	<h2>Readings from USCCB</h2>
+	<ul>
+		<li><%= bible_readings_link(Date.today, "Readings for Today")%></li>
+  	<li><%= sunday_bible_readings_link(Date.today, "Sunday's Readings")%></li>
+	</ul>
 
-	    <h2>Catholic Sites</h2>
-	    <ul>
-	        <li><a href="http://www.vatican.va/phome_en.htm" target="rsite">The Vatican</a></li>
-	        <li><a href="http://www.nccbuscc.org/" target="rsite">United States Conference of Catholic Bishops</a></li>
-	        <li><a href="http://www.archlou.org/" target="rsite">Archdiocese of Louisville</a></li>
-	        <li><a href="http://www.catholicweb.com/" target="rsite">CatholicWeb.com</a></li>
-	        <li><a href="http://www.americancatholic.org/" target="rsite">AmericanCatholic.org</a></li>
-	        <li><a href="http://www.ccky.org/" target="rsite">Catholic Conference of Kentucky</a></li>
-	        <li><a href="http://www.catholiccharitieslouisville.org/" target="rsite">Catholic Charities of Louisville</a></li>
-	        <li><a href="http://www.catholicextension.org/" target="rsite">Catholic Extension</a></li>	   
-	    </ul>
-	
-			<h2>Readings from USCCB</h2>
-		  <ul>
-					<li><%= bible_readings_link(Date.today, "Readings for Today")%>
-	    	  <li><%= sunday_bible_readings_link(Date.today, "Sunday's Readings")%>
-			</ul>
+  <h2>Recent Bulletins</h2>
+  <ul>
+  	<li><%= bulletin_link(Date.today) %></li>
+  	<li><%= bulletin_link(Date.today - 7) %></li>
+  	<li><%= bulletin_link(Date.today - 14) %></li>
+  	<li><%= bulletin_link(Date.today - 21) %></li>
+  	<li><%= bulletin_link(Date.today - 28) %></li>
+  </ul>
 
-	    <h2 id="bulletins">Recent Bulletins</h2>
-	    <ul>
-		    <li><%= bulletin_link(Date.today) %></li>
-		    <li><%= bulletin_link(Date.today - 7) %></li>
-		    <li><%= bulletin_link(Date.today - 14) %></li>
-		    <li><%= bulletin_link(Date.today - 21) %></li>
-		    <li><%= bulletin_link(Date.today - 28) %></li>
-	    </ul>
+  <h2>Local Information</h2>
+  <ul>
+  	<li><a href="http://www.bullittcounty.ky.gov/" target="_blank">
+    	Bullitt County</a></li>
 
-	    <h2 id="other">Other Sites</h2>
-	    <ul>
-	        <li><a href="http://www.bullittcounty.ky.gov/" target="_blank">
-	             Bullitt County</a></li>
+		<li><a href="http://www.weather.com/weather/today/Mount+Washington+KY+40047" target="other">
+      Weather from The Weather Channel</a></li>
+    <li><a href="http://www.wunderground.com/US/KY/Mount_Washington.html" target="other">
+      Weather from wunderground.com</a></li>
 
-	        <li><a href="http://www.weather.com/weather/today/Mount+Washington+KY+40047" target="other">
-	             Weather from The Weather Channel</a></li>
-	        <li><a href="http://www.wunderground.com/US/KY/Mount_Washington.html" target="other">
-	             Weather from wunderground.com</a></li>
+    <li><a href="http://maps.google.com/maps?q=155+Stringer+Lane,+Mount+Washington,+KY&hl=en&sll=37.0625,-95.677068&sspn=52.418008,68.818359&oq=155+Stringer+Lane&hnear=155+Stringer+Ln,+Mt+Washington,+Kentucky+40047&t=m&z=17" target="other">
+      Maps &amp; Directions from Google</a></li>
+  </ul>
 
-	        <li><a href="http://maps.google.com/maps?q=155+Stringer+Lane,+Mount+Washington,+KY&hl=en&sll=37.0625,-95.677068&sspn=52.418008,68.818359&oq=155+Stringer+Lane&hnear=155+Stringer+Ln,+Mt+Washington,+Kentucky+40047&t=m&z=17" target="other">
-	             Maps &amp; Directions from Google</a></li>
-	    </ul>
-	
-			<br />
-			<br />
-			<br />
+	<br />
+	<br />
+	<br />
 </div>
