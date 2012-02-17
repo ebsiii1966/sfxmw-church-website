@@ -14,6 +14,7 @@ class OrgsController < ApplicationController
   # GET /orgs/1.xml
   def show
     @org = Org.find(params[:id])
+    @news_items = NewsItem.order("post_at").find_all_by_org_id(@org.id)
 
     respond_to do |format|
       format.html # show.html.erb

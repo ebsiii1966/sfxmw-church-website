@@ -136,11 +136,30 @@ h3 {
 	font-size: medium;
 }
 
+/* For transparent background in Welcome section */
+
+div.wrapper{  
+    float:left; /* important */  
+    position:relative; /* important(so we can absolutely position the description div */  
+}  
+
+div.description{  
+    position:absolute; /* absolute position (so we can position it where we want)*/  
+    bottom:0px; /* position will be on bottom */  
+    left:0px;  
+    width:780px;
+    /* opacity:0.6; */ /* transparency */  
+    /* filter:alpha(opacity=60); */ /* IE transparency */  
+		/* border: 1px solid red; */
+}  
+
 /* Styles for orgs */
 
 #org_group dt > a {
 	font: x-large "Times New Roman", serif;
 	color: DarkBlue;
+	background-color:#ddd;
+	display: block;
 }
 
 #org_group dd {
@@ -161,8 +180,6 @@ h3 {
 #org_list dl {
 	margin-left: 1em;
 }
-
-/* Styles for index */
 
 #admin_links {
 	/* color:        #224; */
