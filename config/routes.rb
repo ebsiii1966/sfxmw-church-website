@@ -1,5 +1,4 @@
 Sfxmw::Application.routes.draw do
-  resources :news_items
 
   get 'admin' => 'admin#index'
   
@@ -70,8 +69,6 @@ Sfxmw::Application.routes.draw do
   match 'forms' => "home#forms"
   match 'links' => "home#links"
   match 'directions' => "home#directions"
-  match 'feedback' => "home#feedback"
-  # match 'news' => "home#news"
   
   match 'style_a' => "admin#style_a"
   match 'style_b' => "admin#style_b"
@@ -81,6 +78,9 @@ Sfxmw::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => "home#index"
 
+  # For mail
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
   # See how all your routes lay out with "rake routes"
 

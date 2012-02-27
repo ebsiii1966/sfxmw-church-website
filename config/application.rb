@@ -38,5 +38,21 @@ module Sfxmw
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    # Configuration for Action Mailer
+    # config.action_mailer.smtp_settings = {
+    #   :address              => APP_CONFIG[:email_config][:address],
+    #   :port                 => APP_CONFIG[:email_config][:port],
+    #   :domain               => APP_CONFIG[:email_config][:email_domain],
+    #   :user_name            => APP_CONFIG[:email_config][:user_name],
+    #   :password             => APP_CONFIG[:email_config][:password],
+    #   :authentication       => :plain,
+    #   :enable_starttls_auto => true
+    # }
+    # 
+    # config.action_mailer.default_url_options = {
+    #   :host => APP_CONFIG[:email_config][:host]
+    # }
+    
   end
 end

@@ -293,9 +293,20 @@ table.stripe tr:nth-of-type(odd) {
 	width: 160px;
 }
 
+.flash-error {
+	color: red;
+}
+
+.flash-notice {
+	color: green;
+}
 
 /* START:form */
 /* Styles for forms */
+
+.fields, .actions {
+	border: none;
+}
 
 .field, .actions submit {
   font-size: medium;	
