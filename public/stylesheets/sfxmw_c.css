@@ -138,20 +138,44 @@ h3 {
 
 /* For transparent background in Welcome section */
 
-div.wrapper{  
-    float:left; /* important */  
-    position:relative; /* important(so we can absolutely position the description div */  
+div.wrapper {   
+  position:relative; /* wrapper sits inside main, need to undo top and left starting points */
+	clear: both;
+	top: -0.5em;
+	left: -10px;
+	width: 800px;	
+ 	margin-left: auto;
+  margin-right: auto;
+	background: #eee;		
+	/* border: 1px solid red; */
 }  
 
-div.description{  
-    position:absolute; /* absolute position (so we can position it where we want)*/  
-    bottom:0px; /* position will be on bottom */  
-    left:0px;  
-    width:780px;
-    /* opacity:0.6; */ /* transparency */  
-    /* filter:alpha(opacity=60); */ /* IE transparency */  
-		/* border: 1px solid red; */
+div.wrapper a {
+	color: #ddd;
+}
+
+div.description_top {  
+  position:absolute; /* absolute position (so we can position it where we want)*/  
+  top: 0px; /* position will be on top */  
+	padding-top: 0.5em;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 780px;	
+	color: #ddd;
 }  
+
+div.description_bottom {  
+  position:absolute; /* absolute position (so we can position it where we want)*/  
+  top: 0px; /* position will be on top */  
+	padding-top: 0.5em;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 780px;	
+	color: black;
+	opacity: 0.7;
+}  
+
+
 
 /* Styles for orgs */
 
@@ -426,7 +450,7 @@ table.stripe tr:nth-of-type(odd) {
 		/* border: 1px solid red; */
 	}
 		
-	#side_img, #banner_img, #forms, #feedback, #links {
+	#side_img, #banner_img, #forms, #feedback, #links, #welcome {
 		display: none;
 	}	
 
