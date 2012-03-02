@@ -17,19 +17,20 @@
 
 <body id="sfxmw">
 	<div id="banner">
+	<div id="banner_text">
 		<div id="banner_img">
 			<%= image_tag("sfxmw_logo.png") %>
 		</div>
 		<div id="banner_title">
-			<%= @page_title || "St. Francis Xavier Church"%><br />
+			St. Francis Xavier Church<br />
 		</div>
 		<div id="banner_addr">
 	  	155 Stringer Lane &nbsp;&nbsp;&nbsp; Mt. Washington, KY &nbsp; 40047 
-					&nbsp;&nbsp;&nbsp; (502) 	538-4933
+			&nbsp;&nbsp;&nbsp; (502) 538-4933
 		</div>
-		
-    <div id="side">
-			<ul id="nav">
+	</div>
+    <div id="nav">
+			<ul>
 				<li class="first"><%= link_to 'Home', home_path %></li>
 				<li><%= link_to 'General Info', general_path %></li>
 				<li><%= link_to 'Ministries', orgs_path %></li>
@@ -50,7 +51,9 @@
     </div>	
 	</div>
   <div id="footer">
-  	<p>St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846</p>
+		<br />
+  	St. Francis Xavier Church &nbsp;&nbsp;&nbsp; A Catholic Faith Community founded in 1846
+		<br />
 	</div>
 </div>
 

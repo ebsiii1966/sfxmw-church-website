@@ -9,8 +9,7 @@ body {
 }
 
 h1 {	
-	/* font: bold 30px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
-	font: small-caps 40px/40px "Times New Roman", serif;
+	font: small-caps 40px/40px "Times New Roman", serif; 
 	color: DarkBlue;
 }
 
@@ -31,7 +30,8 @@ h3 {
 	clear:	left;
 }
 
-/* Styles for main page */
+/* Styles for banner and footer */
+
 #banner {
 	clear: both;
 	width: 800px;	
@@ -40,12 +40,41 @@ h3 {
 	padding-top: 0.5em;	
 	padding-bottom: 0.5em;
 	background-image: url('../images/dblue179.jpg');
-	/* background: #039; */
-	/* border-bottom: 2px solid; */
-	/* font: bold 30px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
-	font: small-caps 40px/40px "Times New Roman", serif; 
+	/* font: bold 25px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
+	font: small-caps 40px/40px "Times New Roman", serif;
 	color: white;
+	text-align: center; 
+}
+
+/*
+#banner_text {
+	float: left;
+	width: 600px;
 	text-align: center;
+}
+*/
+
+#banner_title {
+	color: white;
+	font: small-caps 40px/40px "Times New Roman", serif;
+}
+
+#banner_addr {
+	color: white;
+	font-size: small;
+}
+
+#banner_img {
+	float: left;
+	margin-left: 20px;
+	margin-right: -110px; /* pulls the banner title closer to the middle */
+	padding-right: 0px;
+	/* border: 1px solid white; */
+}	
+
+#banner_img img {
+	height: 100px;
+	vertical-align: top;
 	/* border: 1px solid red; */
 }
 
@@ -56,37 +85,23 @@ h3 {
   margin-right: auto;
 	padding-bottom: 1em;
 	background-image: url('../images/dblue179.jpg');
-	/* background: #039; */
 	border-top: 2px solid;
 	font-family: verdana, arial, helvetica, sans-serif;
 	font-size: small;
 	color: white;
 	text-align: center;
-	/* border: 1px solid red; */
 }
 
-#banner_addr {
-	color: white;
-	font-size: small;
-}
-
-#banner_img {
-	float:			left;
-	margin-left: 20px;
-}	
-
-#banner_img img {
-	height: 			  100px;
-	vertical-align: top;
-	/* border: 1px solid yellow; */
-}
+/* Columns and Main */
+/* Columns is a wrapper for Main; carry over from other layout options */
+/* 		will also cause blue background for anything not within Main div */
+/* Main is the primary content div for all pages */
 
 #columns {
 	width: 800px;	
  	margin-left: auto;
   margin-right: auto;
   background-image: url('../images/dblue179.jpg');
-	/* border: 1px solid red; */
 }
 
 #main {
@@ -94,15 +109,15 @@ h3 {
 	padding-top: 0.5em;
 	padding-left: 10px;
 	padding-right: 10px;
-	width: 780px;	
+	width: 780px;	/* main content area is smaller than fixed width for padding on left and right */
  	margin-left: auto;
   margin-right: auto;
-	background: #eee;	
-	/* border: 1px solid red; */
-	/* border-top: 2px solid #66c; */
+	background: #eee;	/* very light gray */
 }
 
-#side {
+/* Navigation - above Columns and Main, below Banner */
+
+#nav {
 	clear: both;
 	width: 800px;	
  	margin-left: auto;
@@ -110,11 +125,11 @@ h3 {
 	margin: 0px;
 	padding: 0px;
 	/* font-family: Verdana, Arial, Helvetica, sans-serif; */
-	font: medium verdana,sans-serif; 
-	/* border: 1px solid red; */
+	/* above did not work; maybe a precedent issue?, had to use font below */
+	font: medium verdana, arial, helvetica, sans-serif; 
 }
 
-#nav {
+#nav ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
@@ -123,11 +138,10 @@ h3 {
 #nav li {
 	float: left;
 	padding: .5em 1.5em .5em .5em;
-	/* border-left: 1px solid white; */
 }
 
 #nav li.first {
-	margin-left: 10px;
+	margin-left: 10px; /* additional left margin for first item */
 }
 
 #nav a {
@@ -136,10 +150,11 @@ h3 {
 	font-size: medium;
 }
 
-/* For transparent background in Welcome section */
+/* For home page images w/ embedded text */
+/* NOTE: wrapper sits inside main div, therefore, need to reset width back to 800 and shift left & up */
 
 div.wrapper {   
-  position:relative; /* wrapper sits inside main, need to undo top and left starting points */
+  position: relative;
 	clear: both;
 	top: -0.5em;
 	left: -10px;
@@ -147,35 +162,36 @@ div.wrapper {
  	margin-left: auto;
   margin-right: auto;
 	background: #eee;		
-	/* border: 1px solid red; */
 }  
 
 div.wrapper a {
-	color: #ddd;
+	color: #ddd; /* for ...read more link */
 }
 
 div.description_top {  
-  position:absolute; /* absolute position (so we can position it where we want)*/  
+  position: absolute; /* absolute position (so we can position it where we want) */  
   top: 0px; /* position will be on top */  
 	padding-top: 0.5em;
 	padding-left: 10px;
 	padding-right: 10px;
 	width: 780px;	
-	color: #ddd;
+	color: #ddd; /* for letter text overlaying altar image */
 }  
+
+div.description_top p {
+	font: large "Times New Roman", serif;	
+}
 
 div.description_bottom {  
-  position:absolute; /* absolute position (so we can position it where we want)*/  
+  position: absolute; /* absolute position (so we can position it where we want) */  
   top: 0px; /* position will be on top */  
-	padding-top: 0.5em;
+	padding-top: 0em;
 	padding-left: 10px;
 	padding-right: 10px;
 	width: 780px;	
-	color: black;
-	opacity: 0.7;
+	color: black; /* for letter text overlaying church image */
+	opacity: 0.7; 
 }  
-
-
 
 /* Styles for orgs */
 
@@ -192,7 +208,7 @@ div.description_bottom {
 }
 
 #org_list dt > a {
-	font: large "Verdana", sans-serif;
+	font: large verdana, arial, helvetica, sans-serif;
 	color: DarkBlue;
 }
 
@@ -202,66 +218,65 @@ div.description_bottom {
 }
 
 #org_list dl {
-	margin-left: 1em;
+	margin-left: 1em; /* indent the list */
 }
+
+/* Styles for admin links (edit, destroy, ...) */
 
 #admin_links {
-	/* color:        #224; */
-	color:				DarkBlue;
-	font-weight:  lighter;
-	font-size:    small;
+	color: DarkBlue;
+	font-weight: lighter;
+	font-size: small;
 }
 
-/* Styles for Nav2 - second level navigation */
+/* Styles for Nav2 - second level navigation, used on General Info page */
 
 .nav2 {
-	/* color:	#224; */
-	color:	DarkBlue;
-	font-weight:	lighter;
-	font-size:		small;
+	color: DarkBlue;
+	font-weight: lighter;
+	font-size: small;
 }
 
 .nav2  a{
-	/* color:	#224; */
-	color:	DarkBlue;
-	font-weight:	lighter;
-	font-size:		small;
+	color: DarkBlue;
+	font-weight: lighter;
+	font-size: small;
 }
 
 /* Styles for General Info */
 
 dt {
-	font-weight:	bold;
+	font-weight: bold;
 }
 
 #shift_right {
-	margin-left:	2em;
+	margin-left: 2em;
 }
 
 table.grid {
-	border: 1px sold #000;
 	border-collapse: collapse;
-	white-space:	normal;
-	/* width: 100%; */
+	white-space: normal;
 }
 
 table.grid th {
-	padding-right:	3em;
-	text-align:			left;
-	white-space:		normal; 
+	padding-right: 3em;
+	text-align: left;
+	white-space: normal; 
+	[if lt IE 9] border-bottom: 1px solid #ddd;
 }
 
 table.grid td {
-	text-align:			left;
-	white-space:		normal; 
+	text-align: left;
+	white-space: normal; 
+	[if lt IE 9] border-bottom: 1px solid #ddd;
 }
 
-table.stripe tr:nth-of-type(odd) {
-  background-color:#ddd;
+table.stripe tr:nth-of-type(odd) { 
+  background-color: #ddd;
 }
-
 
 /* Styles for News Items */
+
 .NewsItems {
 	/* border: 1px solid red; */
 }
@@ -275,12 +290,14 @@ table.stripe tr:nth-of-type(odd) {
 
 /* Styles for Home Page */
 
+/* wrap contains left and right divs */
+/* 	this creates a left column and right column within the home page */
+
 #wrap {
 	width: 780px;	
  	margin-left: auto;
   margin-right: auto;
 	background: #eee;
-	/* border: 1px solid red; */
 }
 
 #left {
@@ -290,7 +307,6 @@ table.stripe tr:nth-of-type(odd) {
 	padding-right: 20px;
 	width: 370px;	
 	background: #eee;	
-	/* border-top: 2px solid #66c; */
 }
 
 #right {
@@ -299,9 +315,11 @@ table.stripe tr:nth-of-type(odd) {
 	padding-bottom: 0.5em;
 	width: 390px;	
 	background: #eee;	
-	/* border-top: 2px solid #66c; */
 }
 
+/* container contains bulletins and readings */
+/*	this creates an embedded 2 column section within the outer left of wrap */
+	
 .container {
 	height: 1%;
 	overflow: hidden;
@@ -317,6 +335,8 @@ table.stripe tr:nth-of-type(odd) {
 	width: 160px;
 }
 
+/* Styles for flash messages */
+
 .flash-error {
 	color: red;
 }
@@ -325,7 +345,6 @@ table.stripe tr:nth-of-type(odd) {
 	color: green;
 }
 
-/* START:form */
 /* Styles for forms */
 
 .fields, .actions {
@@ -340,10 +359,13 @@ table.stripe tr:nth-of-type(odd) {
   margin-left: 0.5em;
 	font-size: medium;
 }
+
 .actions select, .actions textarea, .actions input, .actions label {
   margin-left: 0.5em;
 	font-size: medium;
 }
+
+/* Styles for sfxmw_form are not used */
 
 .sfxmw_form fieldset {
   background: #eef;
@@ -377,21 +399,22 @@ table.stripe tr:nth-of-type(odd) {
 .sfxmw_form div {
   margin: 0.5em 0;
 }
-/* END:form */
 
-/* START:i18n */
+
+/* Not sure what the locale style is used for */
+
 .locale {
   float: right;
   margin: -0.25em 0.1em;
 }
-/* END:i18n */
+
 
 
 /* ********** For iPhone - set width or text will be too small to read ********** */
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
 {	
 	body {
-		width:	640px;
+		width: 640px;
 	}
 
 	#banner_addr {
@@ -408,12 +431,10 @@ table.stripe tr:nth-of-type(odd) {
 	body {
 		margin: 0px;
 		padding: 0px;
+		background-image: none;
 	}
 		
 	#banner {
-		font: small-caps "Times New Roman", serif;
-		color: #fff;
-		text-align: center;
 		width: auto;
 	}	
 	
@@ -434,27 +455,33 @@ table.stripe tr:nth-of-type(odd) {
 		width: auto;
 	}
 	
-	#side {
-		float:					none;
-		/*
-		padding-top: 		.5em;
-		padding-bottom: .5em;
-		*/
+	#nav {
+		float: none;
 		margin: 0px;
 		padding: 0px;
-		width:					auto;
-		font-family: 		verdana, arial, helvetica, sans-serif;
-		/* text-align:			center; */
-		/* font-family: 		"Times New Roman", Times, serif; */	
-		background: 		#11a;
-		/* border: 1px solid red; */
+		width: auto;
+		font-family: verdana, arial, helvetica, sans-serif;
+		background: #11a;
 	}
 		
-	#side_img, #banner_img, #forms, #feedback, #links, #welcome {
+	/* defines which images are removed */
+	#side_img, #banner_img {
+		display: none;
+	}
+	
+	/* defines which nav menus are removed */
+	/*
+	#forms, #contact, #links, #welcome {
 		display: none;
 	}	
+	*/
 
-	#nav {
+	/* remove top and bottom images from home page via wrapper div */
+	.wrapper {
+		display: none;
+	}
+	
+	#nav ul {
 		list-style: none;
 		margin: 0px;
 		padding: 0px;
@@ -463,11 +490,36 @@ table.stripe tr:nth-of-type(odd) {
 	#nav li {
 		float: left;
 		padding: .5em .5em .5em .5em;
-		border-left: 1px solid white;
+		/* border-left: 1px solid white; */
 	}
 
 	#nav li.first {
 		border-left: 0px;
+		margin-left: auto;
 	}
 
+	#wrap {
+		width: auto;
+	}
+	
+	#left {
+		float: none;
+		width: auto;
+		padding-right: 0.5em;
+	}
+	
+	#right {
+		float: none;
+		width: auto;
+	}
+
+	.NewsItems img {
+		max-width: 100%;
+	}
+	
+	/* for form elements */
+	.field textarea, .field input[type="text"] {
+		width: 90%;
+	}
+	
 }

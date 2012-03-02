@@ -120,8 +120,8 @@ def process_markup(text, truncate=false)
   t = t.gsub(/''(.*)''/, '<b>\1</b>')  
   
   # Link markup
-  t = t.gsub(/\[(.*)\|(.*)\]/, '<a href="\1">\2</a>')
-  t = t.gsub(/\[(.*)\]/, '<a href="\1">\1</a>')
+  t = t.gsub(/\[(.*)\|(.*)\]/, '<a href="\1" target="_blank">\2</a>')
+  t = t.gsub(/\[(.*)\]/, '<a href="\1" target="_blank">\1</a>')
   
   # Partial link (from truncation)
   t = t.gsub(/\[(.*)/, '')

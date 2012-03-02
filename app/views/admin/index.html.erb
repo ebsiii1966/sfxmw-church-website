@@ -12,12 +12,7 @@
 		please use the "Logout" button to return to the site as a normal user. 
 	</p>
 	<br />
-	<p style="color:red">
-		TO-DO: This page may have basic information that is only available to those that
-		have administration rights.  Information may include web statistics, last login/update
-		times, etc.
-	</p>
-	<br />
+	<% if false %>
 	<p>
 		Below, are buttons to change the overall "style" of the website.  The current options are defined as:
 		<br />
@@ -41,6 +36,7 @@
 		<%= button_to 'Style B', :action => 'style_b', :method => :get %>
 		<%= button_to 'Style C', :action => 'style_c', :method => :get %>
 	</p>
+	<% end %>
 <% end %>
 <br />
 <br />
