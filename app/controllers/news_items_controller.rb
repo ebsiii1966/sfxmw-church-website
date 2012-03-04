@@ -10,6 +10,15 @@ class NewsItemsController < ApplicationController
     end
   end
 
+  def feed
+    @news_items = NewsItem.order("post_at DESC").all
+  
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false } #feed.rss.builder
+    end
+  end
+
   # GET /news_items/1
   # GET /news_items/1.xml
   def show

@@ -87,9 +87,11 @@
 <a href="http://www.facebook.com/pages/SFXMW/316368557679" target="_blank">
 <%= image_tag("Facebook-icon.png", :title => "SFXMW on Facebook") %>
 </a>
-<%= image_tag("Twitter-icon.png", :title => "SFXMW on Twitter (coming soon?)") %>
-<%= image_tag("RSS-icon.png", :title => "SFXMW RSS Feed (coming soon?)") %>
-
+<a href="https://www.twitter.com/sfxmw" target="_blank">
+<%= image_tag("Twitter-icon.png", :title => "SFXMW on Twitter") %>
+</a>
+<%= link_to image_tag("RSS-icon.png", :title => "SFXMW RSS Feed"), 
+  :action => 'feed', :controller => 'news_items' %>
 
 </div>
 
