@@ -1,10 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b class="quick_list">Name (id):</b>
   <%= @user.name %>
+	<br/>
+  <b class="quick_list">Full Name:</b>
+	<%= @user.full_name %>
+	<br/>
+	<b class="quick_list">Rights:</b>
+	<%= 'Super ' if @user.rights %>
+	<br/>
+	<b class="quick_list">Active:</b>
+	<%= @user.show_active %>
+	<br/>
+	<b class="quick_list">Last Login:</b>
+	<%= @user.show_last_login %>
+	<br/>
+	<b class="quick_list">Created at:</b>
+	<%= @user.created_at.strftime("%B %d, %Y") %>
+	<br/>
+	<b class="quick_list">Updated at:</b>
+	<%= @user.updated_at.strftime("%B %d, %Y") %>
+	<br/>
 </p>
 
-
+<% if User.super?(session[:user_rights]) %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>

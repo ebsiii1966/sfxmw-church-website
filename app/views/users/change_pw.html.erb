@@ -1,0 +1,50 @@
+<h1>Change Password</h1>
+<% if flash[:alert] %>
+  <p class="flash-error"><%= flash[:alert] %></p>
+<% end %>
+<% if flash[:notice] %>
+  <p class="flash-notice"><%= flash[:notice] %></p>
+<% end %>	
+
+<div class="sfxmw_form">
+	
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<%= hidden_field_tag(:mode, 'change_pw') %>
+
+<fieldset>
+<legend>Change Password for: <%= @user.name %></legend>
+NOTES: <br />
+Password must be at least 6 characters in length.<br />
+Password must contain at least one digit (0-9).<br />
+<br />
+<div>
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password, :size => 40 %>
+</div>
+<div>
+  <%= f.label :password_confirmation, 'Confirm:' %>
+  <%= f.password_field :password_confirmation, :size => 40 %>
+</div>
+<div>
+  <%= f.submit %>
+</div>
+</fieldset>
+<% end %>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+</div>

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
+    logger.info 'users index'
     if session[:user_id]
       @users = User.order(:name)
 
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
+    logger.info 'users show'
     if session[:user_id]
       @user = User.find(params[:id])
 
@@ -32,6 +34,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
+    logger.info 'users new'
     if session[:user_id]
       @user = User.new
 
@@ -46,6 +49,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    logger.info 'users edit'
     if session[:user_id]
       @user = User.find(params[:id])
     else
@@ -56,6 +60,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
+    logger.info 'users create'
     if session[:user_id]
       @user = User.new(params[:user])
 
@@ -77,16 +82,28 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
+    logger.info 'users update'
     if session[:user_id]
       @user = User.find(params[:id])
 
       respond_to do |format|
         if @user.update_attributes(params[:user])
-          format.html { redirect_to(users_url, 
-            :notice => "User #{@user.name} was successfully updated.") }
-          format.xml  { head :ok }
+          if params[:mode] == 'change_pw'
+            format.html { redirect_to(admin_url, 
+              :notice => "User #{@user.name}'s password was successfully updated.") }
+            format.xml  { head :ok }
+          else
+            format.html { redirect_to(users_url, 
+              :notice => "User #{@user.name} was successfully updated.") }
+            format.xml  { head :ok }
+          end
         else
-          format.html { render :action => "edit" }
+          logger.info "users before format.html, params[:mode] = #{params[:mode]}"
+          if params[:mode] == 'change_pw'
+            format.html { render :action => "change_pw" }
+          else
+            format.html { render :action => "edit" }
+          end
           format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
         end
       end
@@ -98,6 +115,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
+    logger.info 'users destroy'
     if session[:user_id]
       @user = User.find(params[:id])
       @user.destroy
@@ -110,4 +128,15 @@ class UsersController < ApplicationController
       redirect_to :action => 'index', :controller => 'home'
     end
   end
+  
+  # GET /users/change_pw
+  def change_pw
+    logger.info 'users change_pw'    
+    if session[:user_id]
+      @user = User.find(session[:user_id])      
+    else
+      redirect_to :action => 'index', :controller => 'home'
+    end
+  end
+  
 end

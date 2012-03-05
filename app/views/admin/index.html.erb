@@ -1,4 +1,11 @@
 <h1>Admin Section</h1>
+	<% if flash[:alert] %>
+	  <p class="flash-error"><%= flash[:alert] %></p>
+	<% end %>
+	<% if flash[:notice] %>
+	  <p class="flash-notice"><%= flash[:notice] %></p>
+	<% end %>	
+	
 	<% if !session[:user_id] %>
   	<br />
   	<%= button_to 'Login', login_path, :method => :get %>
@@ -12,6 +19,13 @@
 		please use the "Logout" button to return to the site as a normal user. 
 	</p>
 	<br />
+	
+	<%= link_to 'User List', users_path %>
+	<br />
+	<br />
+	<%= link_to 'Change Password', :controller => :users, :action => :change_pw %>
+	<br />
+	
 	<% if false %>
 	<p>
 		Below, are buttons to change the overall "style" of the website.  The current options are defined as:

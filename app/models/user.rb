@@ -2,7 +2,11 @@ require 'digest/sha2'
 
 class User < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
-  validates :password, :confirmation => true
+  validates :password, :confirmation => true, :length => {:within => 6..20}, :on => :create
+  validates :password, :confirmation => true, :length => {:within => 6..20}, :allow_blank => true, :on => :update
+  # validates_format_of :password, :with => /^$|^(?=.*\d)(?=.*([a-z]|[A-Z]))$/
+  # password must have a digit
+  validates_format_of :password, :with => /^$|^.*.\d.*$/
   
   has_many :news_items, :foreign_key => "created_by"
   has_many :news_items, :foreign_key => "updated_by"
@@ -11,6 +15,7 @@ class User < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_reader :password
   validate :password_must_be_present
+  
   
   def User.authenticate(name, password)
     if user = find_by_name(name)
@@ -31,6 +36,30 @@ class User < ActiveRecord::Base
       generate_salt
       self.hashed_password = self.class.encrypt_password(password, salt)
     end
+  end
+  
+  def show_active
+    if active
+      'Yes'
+    else
+      'No'
+    end
+  end
+  
+  def show_last_login
+    if last_login.nil?
+      'Never Logged In'
+    else
+      last_login.strftime("%B %d, %Y")
+    end
+  end
+  
+  def self.super?(rights_string)
+    rights_string.downcase.include? "super"
+  end
+  
+  def super?
+    rights.downcase.include? "super"
   end
   
   private

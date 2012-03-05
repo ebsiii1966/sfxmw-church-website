@@ -11,6 +11,7 @@ Sfxmw::Application.routes.draw do
   # get "home/index"
 
   resources :users
+  match '/change_pw' => 'users#change_pw', :as => :change_pw
 
   resources :orgs
   

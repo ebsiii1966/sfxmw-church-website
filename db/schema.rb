@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211212834) do
+ActiveRecord::Schema.define(:version => 20120303040004) do
 
   create_table "news_items", :force => true do |t|
     t.string   "summary"
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(:version => 20120211212834) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "full_name"
+    t.datetime "last_login"
+    t.string   "rights"
+    t.boolean  "active",          :default => true
   end
 
 end

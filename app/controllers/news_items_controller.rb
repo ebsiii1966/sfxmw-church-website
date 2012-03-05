@@ -45,7 +45,8 @@ class NewsItemsController < ApplicationController
   # GET /news_items/1/edit
   def edit
     @news_item = NewsItem.find(params[:id])
-    @readonly = true
+    # @readonly = true  --a true value will show the picture location and not allow it to be changed
+    @readonly = false
   end
 
   # POST /news_items

@@ -126,7 +126,7 @@ h3 {
 	padding: 0px;
 	/* font-family: Verdana, Arial, Helvetica, sans-serif; */
 	/* above did not work; maybe a precedent issue?, had to use font below */
-	font: 16px verdana, arial, helvetica, sans-serif; 
+	font: 18px verdana, arial, helvetica, sans-serif; 
 }
 
 #nav ul {
@@ -146,8 +146,6 @@ h3 {
 
 #nav a {
 	color: white;
-	font-family: verdana, arial, helvetica, sans-serif;
-	font-size: medium;
 }
 
 /* For home page images w/ embedded text */
@@ -342,12 +340,19 @@ table.stripe tr:nth-of-type(odd) {
 
 /* Styles for flash messages */
 
-.flash-error {
-	color: red;
+.flash-error, .flash-alert {
+    /* border: thin solid red; */
+		color: red;
 }
 
-.flash-notice {
-	color: green;
+.flash-notice, .flash-info {
+    /* border: thin solid green; */
+		color: green;
+}
+
+.flash-warning {
+    /* border: thin solid yellow; */
+		color: yellow;
 }
 
 /* Styles for forms */
@@ -370,7 +375,15 @@ table.stripe tr:nth-of-type(odd) {
 	font-size: medium;
 }
 
-/* Styles for sfxmw_form are not used */
+.quick_list {
+  width: 10em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block;
+}
+
+/* Styles for sfxmw_form */
 
 .sfxmw_form fieldset {
   background: #eef;
@@ -384,7 +397,7 @@ table.stripe tr:nth-of-type(odd) {
 }
 
 .sfxmw_form label {
-  width: 5em;
+  width: 7em;
   float: left;
   text-align: right;
   padding-top: 0.2em;

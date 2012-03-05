@@ -17,15 +17,33 @@
   <legend>Enter User Details</legend>
 
   <div>
-    <%= f.label :name %>
+    <%= f.label :name, 'Name (id):' %>
     <%= f.text_field :name, :size => 40 %>
   </div>
   <div>
-    <%= f.label :password, 'Password' %>:
+    <%= f.label :full_name, 'Full Name:' %>
+    <%= f.text_field :full_name, :size => 40 %>
+  </div>
+  <div>
+    <%= f.label :rights, 'Rights:' %>
+    <%= f.text_field :rights, :size => 60 %>
+  </div>
+  <div>
+    <%= f.label :active, 'Active:' %>
+    <%= f.check_box :active %>
+  </div>
+	<br />
+	NOTES: <br />
+	Leave password fields empty unless changing password.<br />
+	Password must be at least 6 characters in length.<br />
+	Password must contain at least one digit (0-9).<br />
+	<br />
+  <div>
+    <%= f.label :password, 'Password:' %>
     <%= f.password_field :password, :size => 40 %>
   </div>
   <div>
-    <%= f.label :password_confirmation, 'Confirm' %>:
+    <%= f.label :password_confirmation, 'Confirm:' %>
     <%= f.password_field :password_confirmation, :size => 40 %>
   </div>
   <div>
