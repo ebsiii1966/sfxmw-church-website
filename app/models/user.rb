@@ -55,11 +55,15 @@ class User < ActiveRecord::Base
   end
   
   def self.super?(rights_string)
-    rights_string.downcase.include? "super"
+    if rights.nil?
+      false
+    else
+      rights_string.downcase.include? "super"
+    end
   end
   
   def super?
-    rights.downcase.include? "super"
+    User.super?(rights)
   end
   
   private
