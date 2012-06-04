@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
   end
   
   def self.super?(rights_string)
-    if rights.nil?
+    if rights_string.nil?
       false
     else
       rights_string.downcase.include? "super"

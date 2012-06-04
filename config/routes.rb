@@ -17,7 +17,7 @@ Sfxmw::Application.routes.draw do
   
   resources :news_items
   match '/feed' => 'news_items#feed', :as => :feed, :defaults => { :format => 'rss' }
-
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -83,7 +83,13 @@ Sfxmw::Application.routes.draw do
   # For mail
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
-
+  
+  # For twitter
+  match 'twitter' => 'twitter#new', :as => 'twitter', :via => :get
+  match 'twitter' => 'twitter#create', :as => 'twitter', :via => :post
+  match 'twitterbatch' => 'twitter#batch'
+  #match 'twitter' => 'twitter#show', :as => 'twitter', :via => :get
+    
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

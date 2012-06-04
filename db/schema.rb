@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303040004) do
+ActiveRecord::Schema.define(:version => 20120603031623) do
 
   create_table "news_items", :force => true do |t|
     t.string   "summary"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120303040004) do
     t.string   "picture_file_name"
     t.datetime "picture_updated_at"
     t.boolean  "top_flag"
+    t.boolean  "twitter_flag",         :default => false
   end
 
   create_table "orgs", :force => true do |t|
