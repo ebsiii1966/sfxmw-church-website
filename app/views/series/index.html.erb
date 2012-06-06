@@ -1,0 +1,30 @@
+<h1>Special News Series</h1>
+
+<% @series.each do |series| %>
+
+<div id="series">
+	<dl>
+  <dt><%= link_to series.name, series %>
+	<% if session[:user_id] %>
+    &nbsp;&nbsp;&nbsp;
+    <span id="admin_links">
+    (<%= link_to 'Show', series %>,
+    <%= link_to 'Edit', edit_series_path(series) %>,
+    <%= link_to 'Destroy', series, :confirm => 'Are you sure?', :method => :delete %>)
+    </span>
+  <% end %>
+	</dt>
+  <dd><%= series.description %></dd>
+  </dl>	
+</div>
+
+<% end %>
+
+<br />
+<br />
+<br />
+<br />
+
+<% if session[:user_id] %>
+	<%= link_to 'New Series', new_series_path %>
+<% end %>

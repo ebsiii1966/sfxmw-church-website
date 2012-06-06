@@ -23,11 +23,24 @@ h3 {
 	color: DarkBlue;	
 }
 
+a:link {
+	color: DarkBlue;
+}
+a:visited {
+	color: DarkBlue;
+}
+
 .clear {
 	clear:	both;
 }	
 .clearleft {
 	clear:	left;
+}
+.rightalign {
+	float: right;
+}
+.leftalign {
+	float: left;
 }
 
 /* Styles for banner and footer */

@@ -1,4 +1,13 @@
-<h1>News Items</h1>
+<div class="leftalign">
+<h1>Current News</h1>
+</div>
+<div class="rightalign">
+<br />
+<br />
+<%= link_to 'Special News Series...', series_index_path %>
+</div>
+<div class="clear"></div>
+<hr />
 
 <div class="NewsItems">
 <% @news_items.each do |news_item| %>
@@ -24,7 +33,7 @@
 <% if session[:user_id] %>
 <hr />
 
-<h2>Future News Items</h2>
+<h1>Future News Items</h1>
 <% @news_items.each do |news_item| %>
 <% if news_item.post_at > Time.now %>
 
@@ -40,7 +49,7 @@
 <% end %>
 <% end %>
 
-<h2>Expired News Items</h2>
+<h1>Expired News Items</h1>
 <% @news_items.each do |news_item| %>
 <% if news_item.expire_at < Time.now %>
 

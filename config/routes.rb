@@ -17,6 +17,9 @@ Sfxmw::Application.routes.draw do
   
   resources :news_items
   match '/feed' => 'news_items#feed', :as => :feed, :defaults => { :format => 'rss' }
+
+  resources :series
+
     
   # The priority is based upon order of creation:
   # first created -> highest priority.

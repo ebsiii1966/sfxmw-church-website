@@ -40,6 +40,10 @@
 		<%= f.collection_select(:org_id, Org.all, :id, :name, {:include_blank => 'None'}) %>
   </div>
   <div class="field">
+    <%= f.label 'Series' %><br />
+		<%= f.collection_select(:series_id, Series.all, :id, :name, {:include_blank => 'None'}) %>
+  </div>
+  <div class="field">
     <%= f.label :top_flag %><br />
     <%= f.check_box :top_flag %>
   </div>

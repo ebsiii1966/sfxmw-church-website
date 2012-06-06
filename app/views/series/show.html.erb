@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @series.name %></h1>
+
+<p>
+  <b>Description:</b>
+  <%= @series.description %>
+</p>
+
+<% if @news_items.empty? %>
+<hr />
+<p>Coming soon...</p>
+<% else %>
+<hr />
+<div class="NewsItems">	
+	<% @news_items.each do |news_item| %>
+		<%= display_news(news_item, :h3, true, :thumb) %>
+	<% end %>
+</div>
+<% end %>
+
+<br />
+<br />
+<br />
+<br />
+
+<% if session[:user_id] %>
+<%= link_to 'Edit', edit_series_path(@series) %> |
+<% end %>
+<%= link_to 'Back', series_index_path %>
