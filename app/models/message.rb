@@ -25,6 +25,8 @@ class Message
       APP_CONFIG[:email_config][:office_address]
     when "Pastor"
       APP_CONFIG[:email_config][:pastor_address]
+    when "News Request"
+      APP_CONFIG[:email_config][:news_address]
     else
       APP_CONFIG[:email_config][:webmaster_address]
     end
