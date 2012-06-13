@@ -16,7 +16,7 @@ Sfxmw::Application.configure do
     :user_name            => APP_CONFIG[:email_config][:user_name],
     :password             => APP_CONFIG[:email_config][:password],
     :authentication       => APP_CONFIG[:email_config][:authentication],
-    :enable_starttls_auto => false
+    :enable_starttls_auto => APP_CONFIG[:email_config][:tls]
   }
   
   config.action_mailer.default_url_options = {

@@ -5,18 +5,7 @@ class ContactController < ApplicationController
   end
 
   def create
-    @message = Message.new(params[:message])
-    
-    begin  
-      Twitter.update(status)
-    rescue
-      success = false
-    else 
-      success = true  
-    end
-    
-    
-    
+    @message = Message.new(params[:message]) 
     if @message.valid?
       begin
         NotificationsMailer.new_message(@message).deliver

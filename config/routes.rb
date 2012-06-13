@@ -87,6 +87,10 @@ Sfxmw::Application.routes.draw do
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
   
+  # For New Member Form
+  match 'newmember' => 'newmember#new', :as => 'newmember', :via => :get
+  match 'newmember' => 'newmember#create', :as => 'newmember', :via => :post
+  
   # For twitter
   match 'twitter' => 'twitter#new', :as => 'twitter', :via => :get
   match 'twitter' => 'twitter#create', :as => 'twitter', :via => :post

@@ -8,4 +8,9 @@ class NotificationsMailer < ActionMailer::Base
     mail(:subject => "SFXMW.COM #{message.subject}", :to => message.get_to_address)
   end  
   
+  def new_member(newmember)
+    @newmember = newmember
+    mail(:subject => "New Member Form", :to => newmember.get_to_address)
+  end  
+
 end

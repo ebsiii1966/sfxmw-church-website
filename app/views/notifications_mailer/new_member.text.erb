@@ -1,0 +1,71 @@
+New Member Form
+
+Family Name: <%= @newmember.familyName %>
+Phone Number: <%= @newmember.phone %> <% if @newmember.unlisted == '1' %> (Unlisted) <% end %>
+Address: <%= @newmember.street %> <%= @newmember.pobox %> 
+         <%= @newmember.city %>, <%= @newmember.state %> <%= @newmember.zip %>
+Marital Status: <%= @newmember.maritalStatus %>
+          Date: <%= @newmember.dateOfMarriage %>
+         Place: <%= @newmember.placeOfMarriage %>
+____________________________________________________________
+Name: <%= @newmember.p1fname %> <%= @newmember.p1mname %> <% if @newmember.p1maiden.length > 0 %>(<%= @newmember.p1maiden %>)<% end %>
+Cell: <%= @newmember.p1cell %> <% if @newmember.p1unlisted %>Unlisted!<% end %>
+Email: <%= @newmember.p1email %>
+Date of Birth: <%= @newmember.p1dob %>
+Religion: <%= @newmember.p1religion %>
+Baptized on <%= @newmember.p1baptizedDate %> at <%= @newmember.p1baptizedChurch %> in <%= @newmember.p1baptizedCity %>
+Confirmed on <%= @newmember.p1confirmedDate %> at <%= @newmember.p1confirmedChurch %> in <%= @newmember.p1confirmedCity %>
+Occupation: <%= @newmember.p1occupation %>
+Place of Employment: <%= @newmember.p1placeOfEmployment %>
+Work Phone: <%= @newmember.p1workPhone %>
+
+<% if @newmember.p2fname.length > 0 %>
+____________________________________________________________
+Name: <%= @newmember.p2fname %> <%= @newmember.p2mname %> <% if @newmember.p2maiden.length > 0 %>(<%= @newmember.p2maiden %>)<% end %>
+Cell: <%= @newmember.p2cell %> <% if @newmember.p2unlisted %>Unlisted!<% end %>
+Email: <%= @newmember.p2email %>
+Date of Birth: <%= @newmember.p2dob %>
+Religion: <%= @newmember.p2religion %>
+Baptized on <%= @newmember.p2baptizedDate %> at <%= @newmember.p2baptizedChurch %> in <%= @newmember.p2baptizedCity %>
+Confirmed on <%= @newmember.p2confirmedDate %> at <%= @newmember.p2confirmedChurch %> in <%= @newmember.p2confirmedCity %>
+Occupation: <%= @newmember.p2occupation %>
+Place of Employment: <%= @newmember.p2placeOfEmployment %>
+Work Phone: <%= @newmember.p2workPhone %>
+<% end %>
+<% if @newmember.c1name.length > 0 %>
+____________________________________________________________
+Name: <%= @newmember.c1name %>
+Gender: <%= @newmember.c1gender %>
+Date of Birth: <%= @newmember.c1dob %>
+Baptized on <%= @newmember.c1baptizedDate %> at <%= @newmember.c1baptizedChurch %> in <%= @newmember.c1baptizedCity %>
+Confirmed on <%= @newmember.c1confirmedDate %> at <%= @newmember.c1confirmedChurch %> in <%= @newmember.c1confirmedCity %>
+<% end %>
+<% if @newmember.c2name.length > 0 %>
+____________________________________________________________
+Name: <%= @newmember.c2name %>
+Gender: <%= @newmember.c2gender %>
+Date of Birth: <%= @newmember.c2dob %>
+Baptized on <%= @newmember.c2baptizedDate %> at <%= @newmember.c2baptizedChurch %> in <%= @newmember.c2baptizedCity %>
+Confirmed on <%= @newmember.c2confirmedDate %> at <%= @newmember.c2confirmedChurch %> in <%= @newmember.c2confirmedCity %>
+<% end %>
+<% if @newmember.c3name.length > 0 %>
+____________________________________________________________
+Name: <%= @newmember.c3name %>
+Gender: <%= @newmember.c3gender %>
+Date of Birth: <%= @newmember.c3dob %>
+Baptized on <%= @newmember.c3baptizedDate %> at <%= @newmember.c3baptizedChurch %> in <%= @newmember.c3baptizedCity %>
+Confirmed on <%= @newmember.c3confirmedDate %> at <%= @newmember.c3confirmedChurch %> in <%= @newmember.c3confirmedCity %>
+<% end %>
+<% if @newmember.c4name.length > 0 %>
+____________________________________________________________
+Name: <%= @newmember.c4name %>
+Gender: <%= @newmember.c4gender %>
+Date of Birth: <%= @newmember.c4dob %>
+Baptized on <%= @newmember.c4baptizedDate %> at <%= @newmember.c4baptizedChurch %> in <%= @newmember.c4baptizedCity %>
+Confirmed on <%= @newmember.c4confirmedDate %> at <%= @newmember.c4confirmedChurch %> in <%= @newmember.c4confirmedCity %>
+<% end %>
+____________________________________________________________
+Emergency Contact: <%= @newmember.contactName %>
+Phone: <%= @newmember.contactPhone %>
+Relationship: <%= @newmember.contactRelationship %>
+

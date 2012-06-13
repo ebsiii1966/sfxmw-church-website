@@ -14,7 +14,7 @@ class SeriesController < ApplicationController
   # GET /series/1.xml
   def show
     @series = Series.find(params[:id])
-    @news_items = NewsItem.order("post_at DESC").series(@series.id)    
+    @news_items = NewsItem.order("post_at DESC").series(@series.id).current    
 
     respond_to do |format|
       format.html # show.html.erb
