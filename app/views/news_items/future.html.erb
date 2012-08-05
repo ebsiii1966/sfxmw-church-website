@@ -1,0 +1,20 @@
+<h1>Future News</h1>
+
+<div class="NewsItems">
+<% @news_items.each do |news_item| %>
+	<h2><%= news_item.summary %></h2>
+	&nbsp;&nbsp;&nbsp;
+	Will post on <%= news_item.post_at.strftime("%B %d, %Y") %><br />
+
+	<% if session[:user_id] %>
+	  &nbsp;&nbsp;&nbsp;
+  	<%= link_to 'Show', news_item %>&nbsp;&nbsp;
+  	<%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
+  	<%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
+		<br />
+	<% end %>
+	
+<% end %>
+<br /><br /><br />
+</div>
+

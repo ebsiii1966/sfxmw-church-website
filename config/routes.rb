@@ -17,6 +17,8 @@ Sfxmw::Application.routes.draw do
   
   resources :news_items
   match '/feed' => 'news_items#feed', :as => :feed, :defaults => { :format => 'rss' }
+  match '/expired' => 'news_items#expired', :as => :expired
+  match '/future' => 'news_items#future', :as => :future
 
   resources :series
 

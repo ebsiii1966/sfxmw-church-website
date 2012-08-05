@@ -11,7 +11,6 @@
 
 <div class="NewsItems">
 <% @news_items.each do |news_item| %>
-<% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
 	
 	<%= display_news(news_item, :h2, true, :thumb) %>
 	Posted: <%= news_item.post_at.strftime("%B %d, %Y") %>
@@ -26,45 +25,12 @@
 	<hr />
 	
 <% end %>
-<% end %>
 <br />
 </div>
 
 <% if session[:user_id] %>
 <hr />
-
-<h1>Future News Items</h1>
-<% @news_items.each do |news_item| %>
-<% if news_item.post_at > Time.now %>
-
-	<%= display_news(news_item, :h2, true, :thumb) %>	
-	Will post on: <%= news_item.post_at.strftime("%B %d, %Y") %>
-	<br />	
-	<br />
-  <%= link_to 'Show', news_item %>&nbsp;&nbsp;
-  <%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
-  <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
-	<hr />
-	
-<% end %>
-<% end %>
-
-<h1>Expired News Items</h1>
-<% @news_items.each do |news_item| %>
-<% if news_item.expire_at < Time.now %>
-
-	<%= display_news(news_item, :h2, true, :thumb) %>	
-	Expired on: <%= news_item.expire_at.strftime("%B %d, %Y") %>
-	<br />
-	<br />		
-  <%= link_to 'Show', news_item %>&nbsp;&nbsp;
-  <%= link_to 'Edit', edit_news_item_path(news_item) %>&nbsp;&nbsp;
-  <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
-	<hr />
-	
-<% end %>
-<% end %>
-
-<br />
+<%= link_to 'Future News Items', :action => 'future', :controller => 'news_items' %> <br />
+<%= link_to 'Expired News Items', :action => 'expired', :controller => 'news_items' %> <br />
 <%= link_to 'New News item', new_news_item_path %>
 <% end %>

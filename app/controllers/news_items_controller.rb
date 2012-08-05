@@ -2,10 +2,28 @@ class NewsItemsController < ApplicationController
   # GET /news_items
   # GET /news_items.xml
   def index
-    @news_items = NewsItem.order("post_at DESC").all
+    @news_items = NewsItem.current.order("post_at DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
+      format.xml  { render :xml => @news_items }
+    end
+  end
+
+  def expired
+    @news_items = NewsItem.expired.order("post_at DESC").all
+
+    respond_to do |format|
+      format.html
+      format.xml  { render :xml => @news_items }
+    end
+  end
+
+  def future
+    @news_items = NewsItem.future.order("post_at DESC").all
+
+    respond_to do |format|
+      format.html
       format.xml  { render :xml => @news_items }
     end
   end
