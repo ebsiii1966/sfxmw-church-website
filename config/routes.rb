@@ -76,6 +76,7 @@ Sfxmw::Application.routes.draw do
   match 'links' => "home#links"
   match 'directions' => "home#directions"
   match 'welcome' => "home#welcome"
+  match 'fr_dale' => "home#fr_dale"
   
   match 'style_a' => "admin#style_a"
   match 'style_b' => "admin#style_b"
