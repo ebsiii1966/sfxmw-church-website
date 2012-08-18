@@ -14,10 +14,20 @@
 <h2>News Items</h2>
 <div class="NewsItems">	
 	<% @news_items.each do |news_item| %>
-		<% if (news_item.post_at < Time.now) and (news_item.expire_at > Time.now) %>
-			<%= display_news(news_item, :h3, true, :thumb) %>
-		<% end %>
+		<%= display_news(news_item, :h3, true, :thumb) %>
 	<% end %>
+</div>
+<% end %>
+
+<% if !@forms.empty? %>
+<hr />
+<h2>Forms</h2>
+<div class="Forms">
+	<ul>	
+	<% @forms.each do |form| %>
+  	<li><a href="<%= form.form.url %>" target="forms"><%= form.name %></a></li>
+	<% end %>
+	</ul>
 </div>
 <% end %>
 

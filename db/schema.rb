@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604221423) do
+ActiveRecord::Schema.define(:version => 20120817123755) do
+
+  create_table "forms", :force => true do |t|
+    t.string   "name"
+    t.string   "notes"
+    t.string   "form_url"
+    t.integer  "created_by"
+    t.integer  "updated_by"
+    t.integer  "approved_by"
+    t.datetime "post_at"
+    t.datetime "expire_at"
+    t.integer  "org_id"
+    t.integer  "form_content_type"
+    t.integer  "form_file_size"
+    t.string   "form_file_name"
+    t.datetime "form_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news_items", :force => true do |t|
     t.string   "summary"

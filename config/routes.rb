@@ -21,6 +21,11 @@ Sfxmw::Application.routes.draw do
   match '/future' => 'news_items#future', :as => :future
 
   resources :series
+  
+  resources :forms
+  match '/expired_forms' => 'forms#expired', :as => :expired
+  match '/future_forms' => 'forms#future', :as => :future
+
 
     
   # The priority is based upon order of creation:
@@ -72,7 +77,7 @@ Sfxmw::Application.routes.draw do
 
   match 'home' => "home#index"
   match 'general' => "home#general"
-  match 'forms' => "home#forms"
+  # match 'forms' => "home#forms"
   match 'links' => "home#links"
   match 'directions' => "home#directions"
   match 'welcome' => "home#welcome"

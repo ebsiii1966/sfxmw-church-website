@@ -1,0 +1,20 @@
+<h1>Future Forms</h1>
+
+<div class="Forms">
+<% @forms.each do |form| %>
+	<h2><%= form.name %></h2>
+	&nbsp;&nbsp;&nbsp;
+	Will post on <%= form.post_at.strftime("%B %d, %Y") %><br />
+
+	<% if session[:user_id] %>
+	  &nbsp;&nbsp;&nbsp;
+  	<%= link_to 'Show', form %>&nbsp;&nbsp;
+  	<%= link_to 'Edit', edit_form_path(form) %>&nbsp;&nbsp;
+  	<%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %>
+		<br />
+	<% end %>
+	
+<% end %>
+<br /><br /><br />
+</div>
+

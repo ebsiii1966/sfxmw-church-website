@@ -1,0 +1,67 @@
+<h1>Forms and Documents</h1>
+
+<div class="forms">
+	<p>
+		This page contains a number of forms and documents used at St. Francis Xavier.  
+		Most of the forms are designed to be printed, filled out, and then returned to the parish office,
+		or dropped in the collection basket at a weekend mass.  
+		If you can't find a particular form or document you are looking for,
+		please use the <%= link_to 'Contact Us', contact_path %> page and send a note to the parish office.
+	</p>	
+	<h2>General Forms</h2>
+	<ul>
+    <li><a href="forms/NewMemberForm.pdf" target="forms">New Member Form</a>
+  			-- Online version coming soon<%= link_to '!', newmember_path %>
+	  </li>
+    <li><a href="forms/AutoWithdrawalForm.pdf" target="forms">Auto Withdrawal Form</a></li>
+    <li><a href="forms/PhotoReleaseForm.pdf" target="forms">Photo Release Form</a></li>
+    <li><a href="forms/VolunteerBackgroundForm.pdf" target="forms">Volunteer Background Form</a></li>
+    <li><a href="forms/PermissionForm.pdf" target="forms">Generic Permission Form</a></li>    
+
+		<% @forms.select{|form| form.org_id.nil? }.each do |form| %>
+	   	<li><a href="<%= form.form.url %>" target="forms"><%= form.name %></a></li>
+			<% if session[:user_id] %>
+		    &nbsp;&nbsp;&nbsp;
+		    <span id="admin_links">
+		    (<%= link_to 'Show', form %>,
+		    <%= link_to 'Edit', edit_form_path(form) %>,
+		    <%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %>)
+		    </span>
+		  <% end %>		
+	  <% end %>
+	</ul>
+
+	<% @orgs.each do |org| %>
+		<% count = 0 %>
+
+		<% @forms.select{|form| form.org_id == org.id}.each do |form| %>
+			<% if count == 0 %>
+				<h2><%= org.name %></h2>
+				<ul>				
+			<% end %>
+			<% count = count + 1 %>
+    	<li><a href="<%= form.form.url %>" target="forms"><%= form.name %></a></li>
+			<% if session[:user_id] %>
+		    &nbsp;&nbsp;&nbsp;
+		    <span id="admin_links">
+		    (<%= link_to 'Show', form %>,
+		    <%= link_to 'Edit', edit_form_path(form) %>,
+		    <%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %>)
+		    </span>
+		  <% end %>
+			
+	  <% end %>
+		<% if count > 0 %>
+			</ul>
+		<% end %>
+  <% end %>
+
+<br />
+</div>
+
+<% if session[:user_id] %>
+<hr />
+<%= link_to 'Future Forms', :action => 'future', :controller => 'forms' %> <br />
+<%= link_to 'Expired Forms', :action => 'expired', :controller => 'forms' %> <br />
+<%= link_to 'New Form', new_form_path %>
+<% end %>

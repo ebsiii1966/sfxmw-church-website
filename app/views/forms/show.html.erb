@@ -1,0 +1,13 @@
+
+<div class="Forms">	
+	<br />
+	<a href="<%= @form.form.url %>" target="forms"><%= @form.name %></a>
+	<br />
+	<br />
+	<br />
+</div>
+
+<% if session[:user_id] %>
+	<%= link_to 'Edit', edit_form_path(@form) %> |
+<% end %>
+<%= link_to 'Back', forms_path %>
