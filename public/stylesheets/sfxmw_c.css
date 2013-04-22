@@ -442,7 +442,8 @@ table.stripe tr:nth-of-type(odd) {
 
 
 /* ********** For iPhone - set width or text will be too small to read ********** */
-@media only screen and (-webkit-min-device-pixel-ratio: 2)
+@media only screen and (device-aspect-ratio: 2/3), /*iPhone < 5 */
+       only screen and (device-aspect-ratio: 40/71) /* iPhone5 */
 {	
 	body {
 		width: 640px;
@@ -456,8 +457,10 @@ table.stripe tr:nth-of-type(odd) {
 
 /* ********** < 800px Wide or iPhone or iPad in Portrait mode ********** */
 @media (max-width: 800px),
-       only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (max-device-width: 1024) and (orientation: portrait)
+       /* only screen and (max-device-width: 1024) and (orientation: portrait) */
+			 only screen and (device-aspect-ratio: 2/3), /*iPhone < 5 */
+			 only screen and (device-aspect-ratio: 40/71),  /* iPhone5 */
+			 only screen and (device-aspect-ratio: 3/4) and (orientation: portrait) /* iPad */
 {	
 	body {
 		margin: 0px;
