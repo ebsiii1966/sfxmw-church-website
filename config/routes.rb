@@ -79,6 +79,7 @@ Sfxmw::Application.routes.draw do
   match 'general' => "home#general"
   # match 'forms' => "home#forms"
   match 'links' => "home#links"
+  match 'vfh' => "home#vfh"
   match 'directions' => "home#directions"
   match 'welcome' => "home#welcome"
   match 'fr_dale' => "home#fr_dale"
