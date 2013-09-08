@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
 gem 'paperclip'
-gem 'twitter', '2.0.1'
+#gem 'twitter', '2.0.1'
+gem 'twitter', '4.8.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

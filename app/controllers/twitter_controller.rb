@@ -58,10 +58,10 @@ class TwitterController < ApplicationController
     success = false
     
     Twitter.configure do |config|
-      config.consumer_key = 'ea8rEJeDmDO3PLSp3JsQ'
-      config.consumer_secret = 'Fd0LM7jf3TQw6QgSIfVbzNfIHwNuBwS3D3nPwOScQ'
-      config.oauth_token = '514496369-HAVpuwMgIuXFoSZyhPDuFm7RIAq2zd27patnHIz0'
-      config.oauth_token_secret = 'NsWTHdhSn4J7tPSqCCkZzXH06MxpYQCC5PgRl0WvFew'
+      config.consumer_key = APP_CONFIG[:twitter_config][:consumer_key]
+      config.consumer_secret = APP_CONFIG[:twitter_config][:consumer_secret]
+      config.oauth_token = APP_CONFIG[:twitter_config][:oauth_token]
+      config.oauth_token_secret = APP_CONFIG[:twitter_config][:oauth_token_secret]
     end
     
     # Twitter.configure do |config|
