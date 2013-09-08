@@ -1,3 +1,15 @@
+This project is the public website for St. Francis Xavier Catholic Church in Mt. Washington, KY.
+
+It was developed using Ruby on Rails.
+Specifically, it is using Ruby version 1.8.7 and Rails version 3.0.10.
+
+Originally, we experimented with different CSS files until we settled on the look we wanted.
+sfxmw_c.css is the stylesheet used by default now.  
+
+For more information, please contact Ed Scott: ed@mwscotts.com.
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
