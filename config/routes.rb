@@ -78,6 +78,7 @@ Sfxmw::Application.routes.draw do
   match 'home' => "home#index"
   match 'general' => "home#general"
   # match 'forms' => "home#forms"
+  match 'stewardship' => "home#stewardship" # for embeded stewardship form
   match 'links' => "home#links"
   match 'vfh' => "home#vfh"
   match 'directions' => "home#directions"
