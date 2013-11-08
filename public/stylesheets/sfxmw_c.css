@@ -1,164 +1,168 @@
 /* Global styles  C */
 
 body {
-	margin: 0px;
-	padding: 0px;
-	/* background: #ccc; */
-	/* background-image: url('../images/yello059.gif'); */
-	background-image: url('../images/dio_bg.png');
+    margin: 0px;
+    padding: 0px;
+    /* background: #ccc; */
+    /* background-image: url('../images/yello059.gif'); */
+    background-image: url('../images/dio_bg.png');
 }
 
-h1 {	
-	font: small-caps 40px/40px "Times New Roman", serif; 
-	color: DarkBlue;
+h1 {    
+    font: small-caps 40px/40px "Times New Roman", serif; 
+    color: DarkBlue;
 }
 
 h2 {
-	font: x-large "Times New Roman", serif;
-	color: DarkBlue;		
+    font: x-large "Times New Roman", serif;
+    color: DarkBlue;        
 }
 
 h3 {
-	font: large "Times New Roman", serif;
-	color: DarkBlue;	
+    font: large "Times New Roman", serif;
+    color: DarkBlue;    
 }
 
 a:link {
-	color: DarkBlue;
+    color: DarkBlue;
 }
 a:visited {
-	color: DarkBlue;
+    color: DarkBlue;
+}
+
+a img{
+    border:0;
 }
 
 .clear {
-	clear:	both;
-}	
+    clear:  both;
+}   
 .clearleft {
-	clear:	left;
+    clear:  left;
 }
 .rightalign {
-	float: right;
+    float: right;
 }
 .leftalign {
-	float: left;
+    float: left;
 }
 
 /* Styles for banner and footer */
 
 #banner {
-	clear: both;
-	width: 800px;	
- 	margin-left: auto;
+    clear: both;
+    width: 800px;   
+    margin-left: auto;
   margin-right: auto;
-	padding-top: 0.5em;	
-	padding-bottom: 0.5em;
-	background-image: url('../images/dblue179.jpg');
-	/* font: bold 25px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
-	font: small-caps 40px/40px "Times New Roman", serif;
-	color: white;
-	text-align: center; 
+    padding-top: 0.5em; 
+    padding-bottom: 0.5em;
+    background-image: url('../images/dblue179.jpg');
+    /* font: bold 25px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
+    font: small-caps 40px/40px "Times New Roman", serif;
+    color: white;
+    text-align: center; 
 }
 
 /*
 #banner_text {
-	float: left;
-	width: 600px;
-	text-align: center;
+    float: left;
+    width: 600px;
+    text-align: center;
 }
 */
 
 #banner_title {
-	color: white;
-	font: small-caps 40px/40px "Times New Roman", serif;
+    color: white;
+    font: small-caps 40px/40px "Times New Roman", serif;
 }
 
 #banner_addr {
-	color: white;
-	font-size: 14px;
+    color: white;
+    font-size: 14px;
 }
 
 #banner_img {
-	float: left;
-	margin-left: 20px;
-	margin-right: -110px; /* pulls the banner title closer to the middle */
-	padding-right: 0px;
-	/* border: 1px solid white; */
-}	
+    float: left;
+    margin-left: 20px;
+    margin-right: -110px; /* pulls the banner title closer to the middle */
+    padding-right: 0px;
+    /* border: 1px solid white; */
+}   
 
 #banner_img img {
-	height: 100px;
-	vertical-align: top;
-	/* border: 1px solid red; */
+    height: 100px;
+    vertical-align: top;
+    /* border: 1px solid red; */
 }
 
 #footer {
-	clear: both;
-	width: 800px;	
-	margin-left: auto;
+    clear: both;
+    width: 800px;   
+    margin-left: auto;
   margin-right: auto;
-	padding-bottom: 1em;
-	background-image: url('../images/dblue179.jpg');
-	border-top: 2px solid;
-	font-family: verdana, arial, helvetica, sans-serif;
-	font-size: 14px;
-	color: white;
-	text-align: center;
+    padding-bottom: 1em;
+    background-image: url('../images/dblue179.jpg');
+    border-top: 2px solid;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: center;
 }
 
 /* Columns and Main */
 /* Columns is a wrapper for Main; carry over from other layout options */
-/* 		will also cause blue background for anything not within Main div */
+/*      will also cause blue background for anything not within Main div */
 /* Main is the primary content div for all pages */
 
 #columns {
-	width: 800px;	
- 	margin-left: auto;
+    width: 800px;   
+    margin-left: auto;
   margin-right: auto;
   background-image: url('../images/dblue179.jpg');
 }
 
 #main {
-	clear: both;
-	padding-top: 0.5em;
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 780px;	/* main content area is smaller than fixed width for padding on left and right */
- 	margin-left: auto;
+    clear: both;
+    padding-top: 0.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 780px;   /* main content area is smaller than fixed width for padding on left and right */
+    margin-left: auto;
   margin-right: auto;
-	background: #eee;	/* very light gray */
+    background: #eee;   /* very light gray */
 }
 
 /* Navigation - above Columns and Main, below Banner */
 
 #nav {
-	clear: both;
-	width: 800px;	
- 	margin-left: auto;
+    clear: both;
+    width: 800px;   
+    margin-left: auto;
   margin-right: auto;
-	margin: 0px;
-	padding: 0px;
-	/* font-family: Verdana, Arial, Helvetica, sans-serif; */
-	/* above did not work; maybe a precedent issue?, had to use font below */
-	font: 18px verdana, arial, helvetica, sans-serif; 
+    margin: 0px;
+    padding: 0px;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    /* above did not work; maybe a precedent issue?, had to use font below */
+    font: 18px verdana, arial, helvetica, sans-serif; 
 }
 
 #nav ul {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #nav li {
-	float: left;
-	padding: .5em 1.5em .5em .5em;
+    float: left;
+    padding: .5em 1.5em .5em .5em;
 }
 
 #nav li.first {
-	margin-left: 10px; /* additional left margin for first item */
+    margin-left: 10px; /* additional left margin for first item */
 }
 
 #nav a {
-	color: white;
+    color: white;
 }
 
 /* For home page images w/ embedded text */
@@ -166,125 +170,125 @@ a:visited {
 
 div.wrapper {   
   position: relative;
-	overflow: hidden; /* fixed IE7 bug where absolute text in description was positioned outside this wrapper */
-	clear: both;
-	top: -0.5em;
-	left: -10px;
-	width: 800px;	
- 	margin-left: auto;
+    overflow: hidden; /* fixed IE7 bug where absolute text in description was positioned outside this wrapper */
+    clear: both;
+    top: -0.5em;
+    left: -10px;
+    width: 800px;   
+    margin-left: auto;
   margin-right: auto;
-	background: #eee;		
+    background: #eee;       
 }  
 
 div.wrapper a {
-	color: #ddd; /* for ...read more link */
+    color: #ddd; /* for ...read more link */
 }
 
 div.description_top {  
   position: absolute; /* absolute position (so we can position it where we want) */  
   top: 0px; /* position will be on top */  
-	padding-top: 0.5em;
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 780px;	
-	color: #ddd; /* for letter text overlaying altar image */
+    padding-top: 0.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 780px;   
+    color: #ddd; /* for letter text overlaying altar image */
 }  
 
 div.description_top p {
-	font: 18px "Times New Roman", serif;	
+    font: 18px "Times New Roman", serif;    
 }
 
 div.description_bottom {  
   position: absolute; /* absolute position (so we can position it where we want) */  
   top: 0px; /* position will be on top */  
-	padding-top: 0em;
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 780px;	
-	color: black; /* for letter text overlaying church image */
-	opacity: 0.7; 	
+    padding-top: 0em;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 780px;   
+    color: black; /* for letter text overlaying church image */
+    opacity: 0.7;   
 }  
 
 div.description_bottom p {
-	font: 18px "Times New Roman", serif;	
+    font: 18px "Times New Roman", serif;    
 }
 
 /* Styles for orgs */
 
 #org_group dt > a {
-	font: x-large "Times New Roman", serif;
-	color: DarkBlue;
-	background-color:#ddd;
-	display: block;
+    font: x-large "Times New Roman", serif;
+    color: DarkBlue;
+    background-color:#ddd;
+    display: block;
 }
 
 #org_group dd {
-	font-weight: normal;
-	font-size: medium;
+    font-weight: normal;
+    font-size: medium;
 }
 
 #org_list dt > a {
-	font: large verdana, arial, helvetica, sans-serif;
-	color: DarkBlue;
+    font: large verdana, arial, helvetica, sans-serif;
+    color: DarkBlue;
 }
 
 #org_list dd {
-	font-weight: normal;
-	font-size: medium;
+    font-weight: normal;
+    font-size: medium;
 }
 
 #org_list dl {
-	margin-left: 1em; /* indent the list */
+    margin-left: 1em; /* indent the list */
 }
 
 /* Styles for admin links (edit, destroy, ...) */
 
 #admin_links {
-	color: DarkBlue;
-	font-weight: lighter;
-	font-size: small;
+    color: DarkBlue;
+    font-weight: lighter;
+    font-size: small;
 }
 
 /* Styles for Nav2 - second level navigation, used on General Info page */
 
 .nav2 {
-	color: DarkBlue;
-	font-weight: lighter;
-	font-size: small;
+    color: DarkBlue;
+    font-weight: lighter;
+    font-size: small;
 }
 
 .nav2  a{
-	color: DarkBlue;
-	font-weight: lighter;
-	font-size: small;
+    color: DarkBlue;
+    font-weight: lighter;
+    font-size: small;
 }
 
 /* Styles for General Info */
 
 dt {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 #shift_right {
-	margin-left: 2em;
+    margin-left: 2em;
 }
 
 table.grid {
-	border-collapse: collapse;
-	white-space: normal;
+    border-collapse: collapse;
+    white-space: normal;
 }
 
 table.grid th {
-	padding-right: 3em;
-	text-align: left;
-	white-space: normal; 
-	[if lt IE 9] border-bottom: 1px solid #ddd;
+    padding-right: 3em;
+    text-align: left;
+    white-space: normal; 
+    [if lt IE 9] border-bottom: 1px solid #ddd;
 }
 
 table.grid td {
-	text-align: left;
-	white-space: normal; 
-	[if lt IE 9] border-bottom: 1px solid #ddd;
+    text-align: left;
+    white-space: normal; 
+    [if lt IE 9] border-bottom: 1px solid #ddd;
 }
 
 table.stripe tr:nth-of-type(odd) { 
@@ -294,98 +298,119 @@ table.stripe tr:nth-of-type(odd) {
 /* Styles for News Items */
 
 .NewsItems {
-	/* border: 1px solid red; */
+    /* border: 1px solid red; */
 }
 
 .NewsItems img {
-	max-width: 			780px;
-	float:					left;
-	padding-right: 	10px;
-	padding-bottom: 10px;
+    max-width:          780px;
+    float:                  left;
+    padding-right:  10px;
+    padding-bottom: 10px;
 }
 
 /* Styles for Home Page */
 
 /* wrap contains left and right divs */
-/* 	this creates a left column and right column within the home page */
+/*  this creates a left column and right column within the home page */
 
 #wrap {
-	width: 780px;	
- 	margin-left: auto;
+    width: 780px;   
+    margin-left: auto;
   margin-right: auto;
-	background: #eee;
+    background: #eee;
 }
 
 #left {
-	float: left;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	padding-right: 20px;
-	width: 370px;	
-	background: #eee;	
+    float: left;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 20px;
+    width: 370px;   
+    background: #eee;   
 }
 
 #right {
-	float: right;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	width: 390px;	
-	background: #eee;	
+    float: right;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 390px;   
+    background: #eee;   
 }
 
 /* container contains bulletins and readings */
-/*	this creates an embedded 2 column section within the outer left of wrap */
-	
+/*  this creates an embedded 2 column section within the outer left of wrap */
+    
 .container {
-	height: 1%;
-	overflow: hidden;
+    height: 1%;
+    overflow: hidden;
 }
 
 #bulletins {
-	float: left;
-	width: 190px;
+    float: left;
+    width: 190px;
 }
 
 #readings {
-	float: left;
-	width: 160px;
+    float: left;
+    width: 160px;
 }
+
+.scripture {
+    font-style:italic;
+    font-family:"Times New Roman", serif;
+    text-align: center; 
+    color: DarkBlue;
+}
+
+.centerDiv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+.noUnderline {
+  text-decoration: none !important;
+}
+
+
+
 
 /* Styles for flash messages */
 
 .flash-error, .flash-alert {
     /* border: thin solid red; */
-		color: red;
+        color: red;
 }
 
 .flash-notice, .flash-info {
     /* border: thin solid green; */
-		color: green;
+        color: green;
 }
 
 .flash-warning {
     /* border: thin solid yellow; */
-		color: yellow;
+        color: yellow;
 }
 
 /* Styles for forms */
 
 .fields, .actions {
-	border: none;
+    border: none;
 }
 
 .field, .actions submit {
-  font-size: medium;	
+  font-size: medium;    
 }
 
 .field select, .field textarea, .field input, .field label {
   margin-left: 0.5em;
-	font-size: medium;
+    font-size: medium;
 }
 
 .actions select, .actions textarea, .actions input, .actions label {
   margin-left: 0.5em;
-	font-size: medium;
+    font-size: medium;
 }
 
 .quick_list {
@@ -420,7 +445,7 @@ table.stripe tr:nth-of-type(odd) {
 
 .sfxmw_form select, .sfxmw_form textarea, .sfxmw_form input {
   margin-left: 0.5em;
-	font-size: medium;
+    font-size: medium;
 }
 
 .sfxmw_form .submit {
@@ -444,116 +469,116 @@ table.stripe tr:nth-of-type(odd) {
 /* ********** For iPhone - set width or text will be too small to read ********** */
 @media only screen and (device-aspect-ratio: 2/3), /*iPhone < 5 */
        only screen and (device-aspect-ratio: 40/71) /* iPhone5 */
-{	
-	body {
-		width: 640px;
-	}
+{   
+    body {
+        width: 640px;
+    }
 
-	#banner_addr {
-		display: none;
-	}
+    #banner_addr {
+        display: none;
+    }
 }
 
 
 /* ********** < 800px Wide or iPhone or iPad in Portrait mode ********** */
 @media (max-width: 800px),
        /* only screen and (max-device-width: 1024) and (orientation: portrait) */
-			 only screen and (device-aspect-ratio: 2/3), /*iPhone < 5 */
-			 only screen and (device-aspect-ratio: 40/71),  /* iPhone5 */
-			 only screen and (device-aspect-ratio: 3/4) and (orientation: portrait) /* iPad */
-{	
-	body {
-		margin: 0px;
-		padding: 0px;
-		background-image: none;
-	}
-		
-	#banner {
-		width: auto;
-	}	
-	
-	#footer {
-		width: auto;
-	}
-	
-	#columns {
-		margin: 0px;
-		padding: 0px;
-		width: auto;
-	}	
-	
-	#main {
-		clear:	both;
-		margin-left: 0px; 
-		border-right: none;
-		width: auto;
-	}
-	
-	#nav {
-		float: none;
-		margin: 0px;
-		padding: 0px;
-		width: auto;
-		font-family: verdana, arial, helvetica, sans-serif;
-		background: #11a;
-	}
-		
-	/* defines which images are removed */
-	#side_img, #banner_img {
-		display: none;
-	}
-	
-	/* defines which nav menus are removed */
-	/*
-	#forms, #contact, #links, #welcome {
-		display: none;
-	}	
-	*/
+             only screen and (device-aspect-ratio: 2/3), /*iPhone < 5 */
+             only screen and (device-aspect-ratio: 40/71),  /* iPhone5 */
+             only screen and (device-aspect-ratio: 3/4) and (orientation: portrait) /* iPad */
+{   
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-image: none;
+    }
+        
+    #banner {
+        width: auto;
+    }   
+    
+    #footer {
+        width: auto;
+    }
+    
+    #columns {
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+    }   
+    
+    #main {
+        clear:  both;
+        margin-left: 0px; 
+        border-right: none;
+        width: auto;
+    }
+    
+    #nav {
+        float: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        font-family: verdana, arial, helvetica, sans-serif;
+        background: #11a;
+    }
+        
+    /* defines which images are removed */
+    #side_img, #banner_img {
+        display: none;
+    }
+    
+    /* defines which nav menus are removed */
+    /*
+    #forms, #contact, #links, #welcome {
+        display: none;
+    }   
+    */
 
-	/* remove top and bottom images from home page via wrapper div */
-	.wrapper {
-		display: none;
-	}
-	
-	#nav ul {
-		list-style: none;
-		margin: 0px;
-		padding: 0px;
-	}
+    /* remove top and bottom images from home page via wrapper div */
+    .wrapper {
+        display: none;
+    }
+    
+    #nav ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
 
-	#nav li {
-		float: left;
-		padding: .5em .5em .5em .5em;
-		/* border-left: 1px solid white; */
-	}
+    #nav li {
+        float: left;
+        padding: .5em .5em .5em .5em;
+        /* border-left: 1px solid white; */
+    }
 
-	#nav li.first {
-		border-left: 0px;
-		margin-left: auto;
-	}
+    #nav li.first {
+        border-left: 0px;
+        margin-left: auto;
+    }
 
-	#wrap {
-		width: auto;
-	}
-	
-	#left {
-		float: none;
-		width: auto;
-		padding-right: 0.5em;
-	}
-	
-	#right {
-		float: none;
-		width: auto;
-	}
+    #wrap {
+        width: auto;
+    }
+    
+    #left {
+        float: none;
+        width: auto;
+        padding-right: 0.5em;
+    }
+    
+    #right {
+        float: none;
+        width: auto;
+    }
 
-	.NewsItems img {
-		max-width: 100%;
-	}
-	
-	/* for form elements */
-	.field textarea, .field input[type="text"] {
-		width: 90%;
-	}
-	
+    .NewsItems img {
+        max-width: 100%;
+    }
+    
+    /* for form elements */
+    .field textarea, .field input[type="text"] {
+        width: 90%;
+    }
+    
 }
