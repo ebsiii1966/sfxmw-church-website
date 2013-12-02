@@ -10,24 +10,24 @@ body {
 
 h1 {    
     font: small-caps 40px/40px "Times New Roman", serif; 
-    color: DarkBlue;
+    color: Purple;
 }
 
 h2 {
     font: x-large "Times New Roman", serif;
-    color: DarkBlue;        
+    color: Purple;        
 }
 
 h3 {
     font: large "Times New Roman", serif;
-    color: DarkBlue;    
+    color: Purple;    
 }
 
 a:link {
-    color: DarkBlue;
+    color: Purple;
 }
 a:visited {
-    color: DarkBlue;
+    color: Purple;
 }
 
 a img{
@@ -56,7 +56,7 @@ a img{
   margin-right: auto;
     padding-top: 0.5em; 
     padding-bottom: 0.5em;
-    background-image: url('../images/dblue179.jpg');
+    background-image: url('../images/dpurple179.jpg');
     /* font: bold 25px "Kells"; small-caps 40px/40px "Times New Roman", serif; */
     font: small-caps 40px/40px "Times New Roman", serif;
     color: white;
@@ -101,7 +101,7 @@ a img{
     margin-left: auto;
   margin-right: auto;
     padding-bottom: 1em;
-    background-image: url('../images/dblue179.jpg');
+    background-image: url('../images/dpurple179.jpg');
     border-top: 2px solid;
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 14px;
@@ -118,7 +118,7 @@ a img{
     width: 800px;   
     margin-left: auto;
   margin-right: auto;
-  background-image: url('../images/dblue179.jpg');
+  background-image: url('../images/dpurple179.jpg');
 }
 
 #main {
@@ -217,7 +217,7 @@ div.description_bottom p {
 
 #org_group dt > a {
     font: x-large "Times New Roman", serif;
-    color: DarkBlue;
+    color: Purple;
     background-color:#ddd;
     display: block;
 }
@@ -229,7 +229,7 @@ div.description_bottom p {
 
 #org_list dt > a {
     font: large verdana, arial, helvetica, sans-serif;
-    color: DarkBlue;
+    color: Purple;
 }
 
 #org_list dd {
@@ -244,7 +244,7 @@ div.description_bottom p {
 /* Styles for admin links (edit, destroy, ...) */
 
 #admin_links {
-    color: DarkBlue;
+    color: Purple;
     font-weight: lighter;
     font-size: small;
 }
@@ -252,13 +252,13 @@ div.description_bottom p {
 /* Styles for Nav2 - second level navigation, used on General Info page */
 
 .nav2 {
-    color: DarkBlue;
+    color: Purple;
     font-weight: lighter;
     font-size: small;
 }
 
 .nav2  a{
-    color: DarkBlue;
+    color: Purple;
     font-weight: lighter;
     font-size: small;
 }
@@ -359,7 +359,7 @@ table.stripe tr:nth-of-type(odd) {
     font-style:italic;
     font-family:"Times New Roman", serif;
     text-align: center; 
-    color: DarkBlue;
+    color: Purple;
 }
 
 .centerDiv {
