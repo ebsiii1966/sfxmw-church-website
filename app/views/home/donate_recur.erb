@@ -1,0 +1,84 @@
+<h2 id="onlinetithingrecur">Stewardship of Treasure</a></h2>
+<script type="text/javascript">
+
+	function getUrlParam(name){
+	   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+		  return decodeURIComponent(name[1]);
+	}
+
+	function isNumber(n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+
+    function formatCreditCardTotal(){
+      var amountTextBox = document.getElementById("cc_amount");
+            var amount = amountTextBox.value;
+            if (amount) {
+                //  it does not contain dollar sign, then format to money value
+                if (amount.indexOf("$") == -1) {
+                   var totNumber = Math.round((amount)*100)/100;
+                   if (isNumber(amount)) {
+                     amountTextBox.value = totNumber.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+                   } else {
+                     amountTextBox.value = "";
+                   }
+                }
+            }
+   }
+
+</script>
+
+<div id="shift_right">
+  <p>
+  Please fill out this form to start your repeating donation using PayPal to Saint Francis Xavier's General Collection.
+  This monthly withdrawal option requires a PayPal account and will be collected approximately every 30 days.<script type="text/javascript">
+  var dt = new Date();
+  var y  = dt.getYear();
+  if (y < 1000) y +=1900;
+  document.write(" Today is " + (dt.getMonth()+1) + "-" + dt.getDate() + "-" + y + " so your recurring draw date on your credit card will be day " + dt.getDate() + " of each month." );
+  </script>
+  </p>
+
+  <p>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_xclick-subscriptions">
+	<input type="hidden" name="business" value="SNWVPXCSQFJTJ">
+	<input type="hidden" name="lc" value="US">
+	<input type="hidden" name="item_name" value="Church General Collection Stewardship">
+	<input type="hidden" name="no_note" value="1">
+	<input type="hidden" name="no_shipping" value="2">
+	<input type="hidden" name="rm" value="1">
+	<input type="hidden" name="return" value="http://www.sfxmw.net/home">
+	<input type="hidden" name="cancel_return" value="http://www.sfxmw.net/home">
+	<input type="hidden" name="src" value="1">
+	<input type="hidden" name="p3" value="1">
+	<input type="hidden" name="t3" value="M">
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="hidden" name="bn" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHosted">
+	<table>
+	<tr><td>Enter your monthly amount</td></tr><tr><td><input id="cc_amount" type="text" name="a3" maxlength="60" onchange="formatCreditCardTotal();" value="<%= params[:cp] %>"></td></tr>
+	<tr><td>How many times would you like this to repeat? (including this payment)</td></tr><tr><td><select name="srt">
+	<option value="12">12</option>
+	<option value="11">11</option>
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="0">Never End</option>
+    </select> </td></tr>
+	</table>
+	<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but6.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+  </p>
+</div>
+<br/>
+<br/>
+<br/>
+
+
