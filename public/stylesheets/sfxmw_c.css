@@ -356,7 +356,7 @@ table.stripe tr:nth-of-type(odd) {
     float: left;
     width: 160px;
     border-left: 1px solid gray;
-		padding-left: 15px;
+        padding-left: 15px;
 }
 
 .scripture {
@@ -377,7 +377,12 @@ table.stripe tr:nth-of-type(odd) {
   text-decoration: none !important;
 }
 
-
+.smallTextBlue {
+    font-size:small;
+    font-family:"Times New Roman", serif;
+    text-align: center; 
+    color: DarkBlue;
+}
 
 
 /* Styles for flash messages */
@@ -526,7 +531,7 @@ table.stripe tr:nth-of-type(odd) {
         font-family: verdana, arial, helvetica, sans-serif;
         background: #11a;
     }
-        
+    
     /* defines which images are removed */
     #side_img, #banner_img {
         display: none;
@@ -584,5 +589,16 @@ table.stripe tr:nth-of-type(odd) {
     .field textarea, .field input[type="text"] {
         width: 90%;
     }
+        
+    /* defines Responsive Images (ri) for mobile support */
+    img.ri { max-width: 90%; }
+    
+    /* hide any data classified as no mobile*/
+    .no_mobile {
+        display: none;
+    }
+
     
 }
+
+
