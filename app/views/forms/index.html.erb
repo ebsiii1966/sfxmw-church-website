@@ -10,12 +10,15 @@
 	</p>	
 	<h2>General Forms</h2>
 	<ul>
-    <li><a href="stewardship" target="forms">Stewardship Intention Form</a></li>    
+    <li><a href="stewardship" target="forms">Stewardship Intention Form</a></li>   
+
+<% if false %> 
     <li><a href="forms/NewMemberForm.pdf" target="forms">New Member Form</a></li>
     <li><a href="forms/AutoWithdrawalForm.pdf" target="forms">Auto Withdrawal Form</a></li>
     <li><a href="forms/PhotoReleaseForm.pdf" target="forms">Photo Release Form</a></li>
     <li><a href="forms/VolunteerBackgroundForm.pdf" target="forms">Volunteer Background Form</a></li>
     <li><a href="forms/PermissionForm.pdf" target="forms">Generic Permission Form</a></li>    
+<% end %>
 
 		<% @forms.select{|form| form.org_id.nil? }.each do |form| %>
 	   	<li><a href="<%= form.form.url %>" target="forms"><%= form.name %></a></li>
