@@ -8,7 +8,7 @@
 	<%= @user.full_name %>
 	<br/>
 	<b class="quick_list">Rights:</b>
-	<%= 'Super ' if @user.rights %>
+	<%= 'Super ' if @user.super? %>
 	<br/>
 	<b class="quick_list">Active:</b>
 	<%= @user.show_active %>
