@@ -9,9 +9,12 @@ def bulletin_link(date)
   end
   
   html = ""
-  html << "<a href=\"http://content.seekandfind.com/bulletins/01/1058/"
-  html << date.strftime("%Y%m%d")
-  html << "B.pdf\" target=\"bulletin\">"
+  # html << "<a href=\"http://content.seekandfind.com/bulletins/01/1058/" 
+  html << "<a href=\"http://bulletins.discovermass.com/files/38042296/"
+  # html << date.strftime("%Y%m%d")
+  html << date.strftime("%m-%d-%Y")
+  # html << "B.pdf\" target=\"bulletin\">"
+  html << ".pdf\" target=\"bulletin\">"
   html << date.strftime("%B %-d, %Y")
   html << "</a>"
   
