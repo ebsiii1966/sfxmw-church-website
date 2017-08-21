@@ -1,0 +1,44 @@
+<script type="text/javascript">
+
+	function getUrlParam(name){
+	   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+		  return decodeURIComponent(name[1]);
+	}
+
+	function isNumber(n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+
+   }
+
+</script>
+
+
+<div class="centerDiv">
+	<p> Thank you for participating in the Saint Francis Xavier Church Super Raffle. </p> 
+
+	  <p> Your ticket purchase has been received. Receipt Number: <%= params[:ti] %> </p>
+	  <p>Please check your email for complete ticket purchase information.</p>
+
+<div class="clear">&nbsp;</div>
+	
+
+		<p> We appreciate the support of our sponsor Derby City Pizza Company. </p>
+
+	
+	
+		<%= image_tag("derby_city_pizza.jpg", :title => "Derby City Pizza Sponsor for Super Raffle") %>
+
+	
+	
+	<div class="clear">&nbsp;</div>
+	
+	<p>Special thanks to Conway-Heaton of Bardstown.</p>
+	</div>
+
+
+<br/>
+<br/>
+<br/>
+
+

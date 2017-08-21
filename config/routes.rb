@@ -81,9 +81,10 @@ Sfxmw::Application.routes.draw do
   match 'stewardship' => "home#stewardship" # for stewardship intro
   match 'stewardship_form' => "home#stewardship_form" # for embeded stewardship form
   match 'stewardship_help' => "home#stewardship_help"
-  match 'stewardship_form_2015' => "home#stewardship_form_2015" # new stewardship form to verify
   match 'donate' => "home#donate" # new page for online giving
   match 'donate_recur' => "home#donate_recur" # stewardship for recurring general collection donation
+  match 'raffle' => "home#raffle_form" # for embeded jotform for super raffle ticket sales
+  match 'raffle_thankyou' => "home#raffle_thankyou" # for thank you and receipt of super raffle ticket sale
   match 'links' => "home#links"
   match 'vfh' => "home#vfh"
   match 'directions' => "home#directions"
