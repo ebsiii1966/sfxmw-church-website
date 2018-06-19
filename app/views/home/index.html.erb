@@ -30,6 +30,7 @@
 <div class="container">
 <div id="bulletins">
 	<h2>Bulletins</h2>
+	<% if false %>
 	<%= bulletin_link(Date.today + 1) %>
 	<br />
 	<%= bulletin_link(Date.today - 6) %>
@@ -37,6 +38,10 @@
 	<%= bulletin_link(Date.today - 13) %>
 	<br />
 	<br />
+	<% end %>
+	<a href="https://discovermass.com/church/st-francis-xavier-mount-washington-ky/#bulletins" target="_blank">
+		Bulletins at DiscoverMass
+	</a>
 </div>
 
 <div id="readings">
