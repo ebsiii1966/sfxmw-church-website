@@ -1,58 +1,12 @@
 <h1>Contact Us</h1>
 
-<div id="page">
-	<% if flash[:alert] %>
-		<p class="flash-error"><%= flash[:alert] %></p>
-	<% end %>
-	<% if flash[:notice] %>
-		<p class="flash-notice"><%= flash[:notice] %></p>
-	<% end %>
-</div>
+<a href="mailto:frontoffice@sfxmw.com?subject=Parish Office (from website)">Parish Office</a>
+<br />
+<a href="mailto:pastor@sfxmw.com?subject=Pastor (from website)">Father Dale (pastor)</a>
+<br />
+<a href="mailto:news@sfxmw.com?subject=News Item Request (from website)">Request a News Item</a>
+<br />
+<a href="mailto:webmaster@sfxmw.com?subject=Parish Office (from website)">Website Feedback</a>
+<br />
 
-<% if flash[:notice] %>
-	<p>From: <%= @message.name %> &nbsp;&nbsp;(<%= @message.email%>)<br />
-		 To: <%= @message.contact_method %><br />
-		 Subject: <%= @message.subject %><br />
-		 <br />
- 		 Message:<br/> 
-     <%= @message.body %><br />
-		 <br />
-		 <br />
-		 <br />
-	</p>		
-<% else %>
-<%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="fields">
-    <div class="field">
-      <%= form.label "Who do you want to contact?" %><br /><br />
-      &nbsp;&nbsp;<%= form.radio_button :contact_method, 'Parish Office', :checked => true %> Parish Office <br />
-      &nbsp;&nbsp;<%= form.radio_button :contact_method, 'Pastor' %> Father Dale (Pastor) <br />
-      &nbsp;&nbsp;<%= form.radio_button :contact_method, 'News Request' %> Request a News Item <br />
-      &nbsp;&nbsp;<%= form.radio_button :contact_method, 'Website Feedback' %> Website Feedback <br /><br />
-    </div>
-    
-    <div class="field">
-      <%= form.label "Your Name:" %><br />
-      <%= form.text_field :name, :size => 40 %>
-    </div>
-    
-    <div class="field">
-      <%= form.label "Your E-mail Address:" %><br />
-      <%= form.text_field :email, :size => 40 %>
-    </div>
-    <div class="field">
-      <%= form.label "Subject:" %><br />
-      <%= form.text_field :subject, :size => 80 %>
-    </div>
-    
-    <div class="field">
-      <%= form.label "Message:" %><br />
-      <%= form.text_area :body, :cols => 70, :rows => 10 %>
-    </div>
-  </fieldset>
-  
-  <fieldset class="actions">
-    <%= form.submit "Send" %>
-  </fieldset>
-<% end %>
-<% end %>
+<br />
