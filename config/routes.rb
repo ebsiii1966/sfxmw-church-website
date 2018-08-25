@@ -85,6 +85,7 @@ Sfxmw::Application.routes.draw do
   match 'donate_recur' => "home#donate_recur" # stewardship for recurring general collection donation
   match 'raffle' => "home#raffle_form" # for embeded jotform for super raffle ticket sales
   match 'raffle_thankyou' => "home#raffle_thankyou" # for thank you and receipt of super raffle ticket sale
+  match 'raffle_info' => "home#raffle_info" # for information about super raffle ticket sales
   match 'links' => "home#links"
   match 'vfh' => "home#vfh"
   match 'directions' => "home#directions"

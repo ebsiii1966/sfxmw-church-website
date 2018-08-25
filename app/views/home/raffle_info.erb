@@ -1,0 +1,17 @@
+
+<script type="text/javascript">
+
+function setUrl() {
+    //prevent iframe cacheing
+    top.document.getElementById('goalChart').setAttribute('src','https://docs.google.com/spreadsheets/d/e/2PACX-1vTFf8YQ01TvuU9rADYdCeJomSEJ_wBzk1GDseYI5gmQiKi-IUw7axneylCPllSKLCrv6EQBPRsnIXJB/pubchart?oid=952742118&rand='+(+ new Date()));
+}    
+</script>
+
+<body onload="setUrl()"> 
+<div class="centerDiv">
+
+<iframe id="goalChart" width="426" height="719" seamless frameborder="0" scrolling="no"></iframe>
+
+</div>	
+</body>
+
