@@ -15,7 +15,7 @@ end
 
 group :production do
   gem 'mysql2', '0.2.7'
-  gem 'rack', '1.2.1'
+  gem 'rack', '1.2.8'
 end
 
 # Use unicorn as the web server
